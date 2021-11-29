@@ -10,9 +10,19 @@
 		AA231E042755368700735F32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231E032755368700735F32 /* AppDelegate.swift */; };
 		AA231E062755368700735F32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231E052755368700735F32 /* SceneDelegate.swift */; };
 		AA231E082755368700735F32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231E072755368700735F32 /* ViewController.swift */; };
-		AA231E0B2755368700735F32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA231E092755368700735F32 /* Main.storyboard */; };
 		AA231E0D2755368A00735F32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA231E0C2755368A00735F32 /* Assets.xcassets */; };
 		AA231E102755368A00735F32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA231E0E2755368A00735F32 /* LaunchScreen.storyboard */; };
+		AA231E6C27557B9E00735F32 /* Data Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231E6B27557B9E00735F32 /* Data Manager.swift */; };
+		AA231EF0275588E000735F32 /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231EE2275588E000735F32 /* MainAssembly.swift */; };
+		AA231EF1275588E000735F32 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231EE4275588E000735F32 /* MainPresenter.swift */; };
+		AA231EF2275588E000735F32 /* MainViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231EE6275588E000735F32 /* MainViewInput.swift */; };
+		AA231EF3275588E000735F32 /* MainViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231EE7275588E000735F32 /* MainViewOutput.swift */; };
+		AA231EF4275588E000735F32 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231EE8275588E000735F32 /* MainViewController.swift */; };
+		AA231EF5275588E000735F32 /* MainInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231EEA275588E000735F32 /* MainInteractorOutput.swift */; };
+		AA231EF6275588E000735F32 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231EEB275588E000735F32 /* MainInteractor.swift */; };
+		AA231EF7275588E000735F32 /* MainInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231EEC275588E000735F32 /* MainInteractorInput.swift */; };
+		AA231EF8275588E000735F32 /* MainRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231EEE275588E000735F32 /* MainRouterInput.swift */; };
+		AA231EF9275588E000735F32 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231EEF275588E000735F32 /* MainRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +30,20 @@
 		AA231E032755368700735F32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA231E052755368700735F32 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AA231E072755368700735F32 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AA231E0A2755368700735F32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AA231E0C2755368A00735F32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA231E0F2755368A00735F32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA231E112755368A00735F32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA231E6B27557B9E00735F32 /* Data Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data Manager.swift"; sourceTree = "<group>"; };
+		AA231EE2275588E000735F32 /* MainAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
+		AA231EE4275588E000735F32 /* MainPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		AA231EE6275588E000735F32 /* MainViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewInput.swift; sourceTree = "<group>"; };
+		AA231EE7275588E000735F32 /* MainViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewOutput.swift; sourceTree = "<group>"; };
+		AA231EE8275588E000735F32 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		AA231EEA275588E000735F32 /* MainInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainInteractorOutput.swift; sourceTree = "<group>"; };
+		AA231EEB275588E000735F32 /* MainInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		AA231EEC275588E000735F32 /* MainInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainInteractorInput.swift; sourceTree = "<group>"; };
+		AA231EEE275588E000735F32 /* MainRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRouterInput.swift; sourceTree = "<group>"; };
+		AA231EEF275588E000735F32 /* MainRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +76,81 @@
 		AA231E022755368700735F32 /* Solve Circiut */ = {
 			isa = PBXGroup;
 			children = (
-				AA231E032755368700735F32 /* AppDelegate.swift */,
+				AA231E17275536CE00735F32 /* VIPER Modules */,
+				AA231E6B27557B9E00735F32 /* Data Manager.swift */,
 				AA231E052755368700735F32 /* SceneDelegate.swift */,
+				AA231E032755368700735F32 /* AppDelegate.swift */,
 				AA231E072755368700735F32 /* ViewController.swift */,
-				AA231E092755368700735F32 /* Main.storyboard */,
 				AA231E0C2755368A00735F32 /* Assets.xcassets */,
 				AA231E0E2755368A00735F32 /* LaunchScreen.storyboard */,
 				AA231E112755368A00735F32 /* Info.plist */,
 			);
 			path = "Solve Circiut";
+			sourceTree = "<group>";
+		};
+		AA231E17275536CE00735F32 /* VIPER Modules */ = {
+			isa = PBXGroup;
+			children = (
+				AA231EE0275588E000735F32 /* Main */,
+			);
+			path = "VIPER Modules";
+			sourceTree = "<group>";
+		};
+		AA231EE0275588E000735F32 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				AA231EE1275588E000735F32 /* Assembly */,
+				AA231EE3275588E000735F32 /* Presenter */,
+				AA231EE5275588E000735F32 /* View */,
+				AA231EE9275588E000735F32 /* Interactor */,
+				AA231EED275588E000735F32 /* Router */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		AA231EE1275588E000735F32 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				AA231EE2275588E000735F32 /* MainAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		AA231EE3275588E000735F32 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				AA231EE4275588E000735F32 /* MainPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		AA231EE5275588E000735F32 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AA231EE6275588E000735F32 /* MainViewInput.swift */,
+				AA231EE7275588E000735F32 /* MainViewOutput.swift */,
+				AA231EE8275588E000735F32 /* MainViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AA231EE9275588E000735F32 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				AA231EEA275588E000735F32 /* MainInteractorOutput.swift */,
+				AA231EEB275588E000735F32 /* MainInteractor.swift */,
+				AA231EEC275588E000735F32 /* MainInteractorInput.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		AA231EED275588E000735F32 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				AA231EEE275588E000735F32 /* MainRouterInput.swift */,
+				AA231EEF275588E000735F32 /* MainRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +213,6 @@
 			files = (
 				AA231E102755368A00735F32 /* LaunchScreen.storyboard in Resources */,
 				AA231E0D2755368A00735F32 /* Assets.xcassets in Resources */,
-				AA231E0B2755368700735F32 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +223,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA231EF7275588E000735F32 /* MainInteractorInput.swift in Sources */,
+				AA231EF9275588E000735F32 /* MainRouter.swift in Sources */,
+				AA231EF3275588E000735F32 /* MainViewOutput.swift in Sources */,
+				AA231EF0275588E000735F32 /* MainAssembly.swift in Sources */,
+				AA231EF2275588E000735F32 /* MainViewInput.swift in Sources */,
+				AA231EF1275588E000735F32 /* MainPresenter.swift in Sources */,
+				AA231E6C27557B9E00735F32 /* Data Manager.swift in Sources */,
 				AA231E082755368700735F32 /* ViewController.swift in Sources */,
+				AA231EF6275588E000735F32 /* MainInteractor.swift in Sources */,
+				AA231EF5275588E000735F32 /* MainInteractorOutput.swift in Sources */,
+				AA231EF4275588E000735F32 /* MainViewController.swift in Sources */,
 				AA231E042755368700735F32 /* AppDelegate.swift in Sources */,
 				AA231E062755368700735F32 /* SceneDelegate.swift in Sources */,
+				AA231EF8275588E000735F32 /* MainRouterInput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AA231E092755368700735F32 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AA231E0A2755368700735F32 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AA231E0E2755368A00735F32 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,9 +382,9 @@
 				INFOPLIST_FILE = "Solve Circiut/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -322,9 +410,9 @@
 				INFOPLIST_FILE = "Solve Circiut/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
