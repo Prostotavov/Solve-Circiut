@@ -12,4 +12,11 @@ class MainInteractor: MainInteractorInput {
     weak var output: MainInteractorOutput!
     var dataManager: DataManager!
     
+    func obtainFormatterString() {
+        
+        let numbers = dataManager.obtainNumbers()
+        let numbersStrnig = numbers.map({"\($0)"}).joined(separator: ",")
+        output.didFinishObtainingFormattedString(numbersStrnig)
+    }
+    
 }

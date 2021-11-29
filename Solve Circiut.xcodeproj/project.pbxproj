@@ -23,6 +23,7 @@
 		AA231EF7275588E000735F32 /* MainInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231EEC275588E000735F32 /* MainInteractorInput.swift */; };
 		AA231EF8275588E000735F32 /* MainRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231EEE275588E000735F32 /* MainRouterInput.swift */; };
 		AA231EF9275588E000735F32 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231EEF275588E000735F32 /* MainRouter.swift */; };
+		AA231EFD27559A2B00735F32 /* MainAssemblyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231EFC27559A2B00735F32 /* MainAssemblyProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		AA231EEC275588E000735F32 /* MainInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainInteractorInput.swift; sourceTree = "<group>"; };
 		AA231EEE275588E000735F32 /* MainRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRouterInput.swift; sourceTree = "<group>"; };
 		AA231EEF275588E000735F32 /* MainRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		AA231EFC27559A2B00735F32 /* MainAssemblyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssemblyProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				AA231EE2275588E000735F32 /* MainAssembly.swift */,
+				AA231EFC27559A2B00735F32 /* MainAssemblyProtocol.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				AA231EF6275588E000735F32 /* MainInteractor.swift in Sources */,
 				AA231EF5275588E000735F32 /* MainInteractorOutput.swift in Sources */,
 				AA231EF4275588E000735F32 /* MainViewController.swift in Sources */,
+				AA231EFD27559A2B00735F32 /* MainAssemblyProtocol.swift in Sources */,
 				AA231E042755368700735F32 /* AppDelegate.swift in Sources */,
 				AA231E062755368700735F32 /* SceneDelegate.swift in Sources */,
 				AA231EF8275588E000735F32 /* MainRouterInput.swift in Sources */,

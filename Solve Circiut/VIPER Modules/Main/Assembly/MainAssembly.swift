@@ -7,28 +7,24 @@
 
 import UIKit
 
-class MainAssembly: NSObject {
+class MainAssembly: NSObject, MainAssemblyProtocol {
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    func assembly(with viewController: MainViewController) {
         
-        let view = MainViewController()
         let presenter = MainPresenter()
         let interactor = MainInteractor()
         let router = MainRouter()
         let dataManager = DataManagerImplementation()
+
+        viewController.output = presenter
         
-        view.output = presenter
-        
-        presenter.view = view as? MainViewInput
+        presenter.view = viewController
         presenter.router = router
         presenter.interactor = interactor
         
         interactor.dataManager = dataManager
         interactor.output = presenter
-        
-        router.view = view
-        
+        router.view = viewController
     }
     
 }

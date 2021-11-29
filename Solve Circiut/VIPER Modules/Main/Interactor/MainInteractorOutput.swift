@@ -9,4 +9,5 @@ import Foundation
 
 protocol MainInteractorOutput: AnyObject {
     
+    func didFinishObtainingFormattedString(_ string: String)
 }

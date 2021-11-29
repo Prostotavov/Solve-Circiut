@@ -9,4 +9,5 @@ import Foundation
 
 protocol MainViewOutput: AnyObject {
     
+    func didPressedAtcion() 
 }
