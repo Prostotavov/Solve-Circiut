@@ -33,7 +33,7 @@ class BoardScrollView: UIScrollView, UIScrollViewDelegate {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setPlateView(view: UIView) {
+    func setBoardView(view: UIView) {
         
         zoomView.removeFromSuperview()
         zoomView = view

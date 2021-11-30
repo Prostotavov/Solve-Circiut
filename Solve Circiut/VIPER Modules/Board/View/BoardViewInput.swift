@@ -9,4 +9,7 @@ import Foundation
 
 protocol BoardViewInput: AnyObject {
     
+    func createPoints() -> [[PointProtocol]]
+    func setBoardView()
+    func setupImageScrollView()
 }

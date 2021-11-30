@@ -38,6 +38,7 @@
 		AA231F1D2755A17400735F32 /* BoardRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231F122755A17400735F32 /* BoardRouterInput.swift */; };
 		AA231F1F2755A28300735F32 /* BoardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231F1E2755A28300735F32 /* BoardScrollView.swift */; };
 		AA231F212755A28E00735F32 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231F202755A28E00735F32 /* BoardView.swift */; };
+		AAD0CA202756EFEE009232D5 /* BoardEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD0CA1F2756EFEE009232D5 /* BoardEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		AA231F122755A17400735F32 /* BoardRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardRouterInput.swift; sourceTree = "<group>"; };
 		AA231F1E2755A28300735F32 /* BoardScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardScrollView.swift; sourceTree = "<group>"; };
 		AA231F202755A28E00735F32 /* BoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
+		AAD0CA1F2756EFEE009232D5 /* BoardEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 				AA231F082755A17400735F32 /* View */,
 				AA231F0C2755A17400735F32 /* Interactor */,
 				AA231F102755A17400735F32 /* Router */,
+				AAD0CA1E2756EFC0009232D5 /* Entity */,
 			);
 			path = Board;
 			sourceTree = "<group>";
@@ -244,6 +247,14 @@
 				AA231F122755A17400735F32 /* BoardRouterInput.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		AAD0CA1E2756EFC0009232D5 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				AAD0CA1F2756EFEE009232D5 /* BoardEntity.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,6 +348,7 @@
 				AA231F172755A17400735F32 /* BoardViewController.swift in Sources */,
 				AA231F162755A17400735F32 /* BoardViewInput.swift in Sources */,
 				AA231F1D2755A17400735F32 /* BoardRouterInput.swift in Sources */,
+				AAD0CA202756EFEE009232D5 /* BoardEntity.swift in Sources */,
 				AA231EFD27559A2B00735F32 /* MainAssemblyProtocol.swift in Sources */,
 				AA231F152755A17400735F32 /* BoardPresenter.swift in Sources */,
 				AA231F1F2755A28300735F32 /* BoardScrollView.swift in Sources */,

@@ -7,45 +7,64 @@
 
 import UIKit
 
-class BoardViewController: UIViewController, BoardViewInput {
+class BoardViewController: UIViewController, BoardViewInput, BoardViewDelegate {
 
     var output: BoardViewOutput!
     var assembler: BoardAssemblyProtocol = BoardAssembly()
     
     var boardScrollView = BoardScrollView()
     var boardView = BoardView()
-
-    // эти константы должны быть равны константам из PlateView
-    let distance = 30
-    let pointsCount = 50
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        assembler.assembly(with: self)
         view.backgroundColor = UIColor.systemBlue
-        boardScrollView = BoardScrollView(frame: self.view.bounds)
+        assembler.assembly(with: self)
+        boardView.delegate = self
+        setBoardView()
         
+    }
+
+    func setBoardView() {
+        let boardViewContentSize: CGSize = output.getBoardContentSize()
+        let origin: CGPoint = CGPoint(x: 0, y: 0)
+        boardView.showPoints()
+        
+        boardScrollView = BoardScrollView(frame: view.bounds)
         view.addSubview(boardScrollView)
         setupImageScrollView()
         
-        let size = CGFloat(distance * (pointsCount + 1))
-        boardView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height)
-        self.boardScrollView.setPlateView(view: boardView)
-        boardView.frame = CGRect(x: 0, y: 0, width: size, height: size)
+        boardView.frame = CGRect(origin: origin, size: view.bounds.size)
+        boardScrollView.setBoardView(view: boardView)
         
-        boardScrollView.contentSize = self.boardView.bounds.size
-        
+        boardView.bounds.size = boardViewContentSize
+        boardScrollView.contentSize = boardViewContentSize
     }
     
     func setupImageScrollView() {
-        boardScrollView.translatesAutoresizingMaskIntoConstraints = false
         
-        boardScrollView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        boardScrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        boardScrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        boardScrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        boardScrollView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            boardScrollView.topAnchor.constraint(equalTo: view.topAnchor),
+            boardScrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            boardScrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            boardScrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
     }
 
 }
 
+// extension for delegate functions
+extension BoardViewController {
+    
+    func createPoints() -> [[PointProtocol]] {
+        return output.createPoints()
+    }
+    
+    func getPointSize() -> CGSize {
+        output.getPointSize()
+    }
+    
+    func getDistance() -> Int {
+        output.getDistance()
+    }
+}

@@ -7,50 +7,36 @@
 
 import UIKit
 
+protocol BoardViewDelegate {
+    func createPoints() -> [[PointProtocol]]
+    func getPointSize() -> CGSize
+    func getDistance() -> Int
+}
+
 class BoardView: UIView {
     
-    // -MARK: constants
-    let pointSize = 5
-    let distance = 30
-    let image = UIImage(systemName: "seal")
-    let pointsCount = 50
-    
-    var points = [[Point]]()
+    var delegate: BoardViewDelegate!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .systemBackground
-        createPoints()
         layer.masksToBounds = true
-        
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func createPoints() {
-        
-        for x in 0..<pointsCount {
-            
-            var linePoints = [Point]()
-            
-            for y in 0..<pointsCount {
-
-                let point = Point()
-                point.image = image
-                
-                point.bounds.size = CGSize(width: pointSize, height: pointSize)
-                point.center = CGPoint(x: (x + 1) * distance, y: (y + 1) * distance)
-                
+    func showPoints() {
+        let pointSize: CGSize = delegate.getPointSize()
+        let distance: Int = delegate.getDistance()
+        let points = delegate.createPoints()
+        for linePoints in points {
+            for point in linePoints {
+                point.bounds.size = pointSize
+                point.center = CGPoint(x: (point.x + 1) * distance, y: (point.y + 1) * distance)
                 self.addSubview(point)
-                
-                point.x = x
-                point.y = y
-                
-                linePoints.append(point)
             }
-            points.append(linePoints)
         }
     }
     

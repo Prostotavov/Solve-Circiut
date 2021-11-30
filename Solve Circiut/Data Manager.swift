@@ -19,8 +19,4 @@ class DataManagerImplementation: DataManager {
     }
 }
 
-class Point: UIImageView {
-    
-    var x = 0
-    var y = 0
-}
+

@@ -17,7 +17,7 @@ class MainView: UIView {
     let buttonWidth: CGFloat = 100
     
     var goToBoardButton = UIButton()
-    var delegate: MainViewDelegate?
+    var delegate: MainViewDelegate!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -47,6 +47,6 @@ class MainView: UIView {
     }
     
     @objc func goToBoardView() {
-        delegate?.goToBoardView()
+        delegate.goToBoardView()
     }
 }
