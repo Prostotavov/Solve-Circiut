@@ -24,6 +24,20 @@
 		AA231EF8275588E000735F32 /* MainRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231EEE275588E000735F32 /* MainRouterInput.swift */; };
 		AA231EF9275588E000735F32 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231EEF275588E000735F32 /* MainRouter.swift */; };
 		AA231EFD27559A2B00735F32 /* MainAssemblyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231EFC27559A2B00735F32 /* MainAssemblyProtocol.swift */; };
+		AA231EFF27559F0900735F32 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231EFE27559F0900735F32 /* MainView.swift */; };
+		AA231F132755A17400735F32 /* BoardAssemblyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231F042755A17400735F32 /* BoardAssemblyProtocol.swift */; };
+		AA231F142755A17400735F32 /* BoardAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231F052755A17400735F32 /* BoardAssembly.swift */; };
+		AA231F152755A17400735F32 /* BoardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231F072755A17400735F32 /* BoardPresenter.swift */; };
+		AA231F162755A17400735F32 /* BoardViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231F092755A17400735F32 /* BoardViewInput.swift */; };
+		AA231F172755A17400735F32 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231F0A2755A17400735F32 /* BoardViewController.swift */; };
+		AA231F182755A17400735F32 /* BoardViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231F0B2755A17400735F32 /* BoardViewOutput.swift */; };
+		AA231F192755A17400735F32 /* BoardInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231F0D2755A17400735F32 /* BoardInteractorInput.swift */; };
+		AA231F1A2755A17400735F32 /* BoardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231F0E2755A17400735F32 /* BoardInteractor.swift */; };
+		AA231F1B2755A17400735F32 /* BoardInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231F0F2755A17400735F32 /* BoardInteractorOutput.swift */; };
+		AA231F1C2755A17400735F32 /* BoardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231F112755A17400735F32 /* BoardRouter.swift */; };
+		AA231F1D2755A17400735F32 /* BoardRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231F122755A17400735F32 /* BoardRouterInput.swift */; };
+		AA231F1F2755A28300735F32 /* BoardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231F1E2755A28300735F32 /* BoardScrollView.swift */; };
+		AA231F212755A28E00735F32 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231F202755A28E00735F32 /* BoardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +60,20 @@
 		AA231EEE275588E000735F32 /* MainRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRouterInput.swift; sourceTree = "<group>"; };
 		AA231EEF275588E000735F32 /* MainRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		AA231EFC27559A2B00735F32 /* MainAssemblyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssemblyProtocol.swift; sourceTree = "<group>"; };
+		AA231EFE27559F0900735F32 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		AA231F042755A17400735F32 /* BoardAssemblyProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardAssemblyProtocol.swift; sourceTree = "<group>"; };
+		AA231F052755A17400735F32 /* BoardAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardAssembly.swift; sourceTree = "<group>"; };
+		AA231F072755A17400735F32 /* BoardPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardPresenter.swift; sourceTree = "<group>"; };
+		AA231F092755A17400735F32 /* BoardViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardViewInput.swift; sourceTree = "<group>"; };
+		AA231F0A2755A17400735F32 /* BoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
+		AA231F0B2755A17400735F32 /* BoardViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardViewOutput.swift; sourceTree = "<group>"; };
+		AA231F0D2755A17400735F32 /* BoardInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardInteractorInput.swift; sourceTree = "<group>"; };
+		AA231F0E2755A17400735F32 /* BoardInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardInteractor.swift; sourceTree = "<group>"; };
+		AA231F0F2755A17400735F32 /* BoardInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardInteractorOutput.swift; sourceTree = "<group>"; };
+		AA231F112755A17400735F32 /* BoardRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardRouter.swift; sourceTree = "<group>"; };
+		AA231F122755A17400735F32 /* BoardRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardRouterInput.swift; sourceTree = "<group>"; };
+		AA231F1E2755A28300735F32 /* BoardScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardScrollView.swift; sourceTree = "<group>"; };
+		AA231F202755A28E00735F32 /* BoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				AA231EE0275588E000735F32 /* Main */,
+				AA231F022755A17400735F32 /* Board */,
 			);
 			path = "VIPER Modules";
 			sourceTree = "<group>";
@@ -133,6 +162,7 @@
 				AA231EE6275588E000735F32 /* MainViewInput.swift */,
 				AA231EE7275588E000735F32 /* MainViewOutput.swift */,
 				AA231EE8275588E000735F32 /* MainViewController.swift */,
+				AA231EFE27559F0900735F32 /* MainView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -152,6 +182,66 @@
 			children = (
 				AA231EEE275588E000735F32 /* MainRouterInput.swift */,
 				AA231EEF275588E000735F32 /* MainRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		AA231F022755A17400735F32 /* Board */ = {
+			isa = PBXGroup;
+			children = (
+				AA231F032755A17400735F32 /* Assembly */,
+				AA231F062755A17400735F32 /* Presenter */,
+				AA231F082755A17400735F32 /* View */,
+				AA231F0C2755A17400735F32 /* Interactor */,
+				AA231F102755A17400735F32 /* Router */,
+			);
+			path = Board;
+			sourceTree = "<group>";
+		};
+		AA231F032755A17400735F32 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				AA231F042755A17400735F32 /* BoardAssemblyProtocol.swift */,
+				AA231F052755A17400735F32 /* BoardAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		AA231F062755A17400735F32 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				AA231F072755A17400735F32 /* BoardPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		AA231F082755A17400735F32 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AA231F092755A17400735F32 /* BoardViewInput.swift */,
+				AA231F0A2755A17400735F32 /* BoardViewController.swift */,
+				AA231F0B2755A17400735F32 /* BoardViewOutput.swift */,
+				AA231F1E2755A28300735F32 /* BoardScrollView.swift */,
+				AA231F202755A28E00735F32 /* BoardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AA231F0C2755A17400735F32 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				AA231F0D2755A17400735F32 /* BoardInteractorInput.swift */,
+				AA231F0E2755A17400735F32 /* BoardInteractor.swift */,
+				AA231F0F2755A17400735F32 /* BoardInteractorOutput.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		AA231F102755A17400735F32 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				AA231F112755A17400735F32 /* BoardRouter.swift */,
+				AA231F122755A17400735F32 /* BoardRouterInput.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -226,19 +316,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA231F142755A17400735F32 /* BoardAssembly.swift in Sources */,
+				AA231F1C2755A17400735F32 /* BoardRouter.swift in Sources */,
 				AA231EF7275588E000735F32 /* MainInteractorInput.swift in Sources */,
 				AA231EF9275588E000735F32 /* MainRouter.swift in Sources */,
+				AA231F1A2755A17400735F32 /* BoardInteractor.swift in Sources */,
 				AA231EF3275588E000735F32 /* MainViewOutput.swift in Sources */,
+				AA231F212755A28E00735F32 /* BoardView.swift in Sources */,
 				AA231EF0275588E000735F32 /* MainAssembly.swift in Sources */,
 				AA231EF2275588E000735F32 /* MainViewInput.swift in Sources */,
 				AA231EF1275588E000735F32 /* MainPresenter.swift in Sources */,
+				AA231F1B2755A17400735F32 /* BoardInteractorOutput.swift in Sources */,
 				AA231E6C27557B9E00735F32 /* Data Manager.swift in Sources */,
 				AA231E082755368700735F32 /* ViewController.swift in Sources */,
 				AA231EF6275588E000735F32 /* MainInteractor.swift in Sources */,
+				AA231EFF27559F0900735F32 /* MainView.swift in Sources */,
 				AA231EF5275588E000735F32 /* MainInteractorOutput.swift in Sources */,
+				AA231F132755A17400735F32 /* BoardAssemblyProtocol.swift in Sources */,
 				AA231EF4275588E000735F32 /* MainViewController.swift in Sources */,
+				AA231F172755A17400735F32 /* BoardViewController.swift in Sources */,
+				AA231F162755A17400735F32 /* BoardViewInput.swift in Sources */,
+				AA231F1D2755A17400735F32 /* BoardRouterInput.swift in Sources */,
 				AA231EFD27559A2B00735F32 /* MainAssemblyProtocol.swift in Sources */,
+				AA231F152755A17400735F32 /* BoardPresenter.swift in Sources */,
+				AA231F1F2755A28300735F32 /* BoardScrollView.swift in Sources */,
+				AA231F182755A17400735F32 /* BoardViewOutput.swift in Sources */,
 				AA231E042755368700735F32 /* AppDelegate.swift in Sources */,
+				AA231F192755A17400735F32 /* BoardInteractorInput.swift in Sources */,
 				AA231E062755368700735F32 /* SceneDelegate.swift in Sources */,
 				AA231EF8275588E000735F32 /* MainRouterInput.swift in Sources */,
 			);

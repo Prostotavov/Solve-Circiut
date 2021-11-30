@@ -9,5 +9,6 @@ import Foundation
 
 protocol MainViewOutput: AnyObject {
     
-    func didPressedAtcion() 
+    func didPressedAtcion()
+    func goToBoardView()
 }

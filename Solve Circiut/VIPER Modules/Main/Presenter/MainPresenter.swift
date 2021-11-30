@@ -18,6 +18,10 @@ class MainPresenter: MainViewOutput, MainInteractorOutput {
         interactor.obtainFormatterString()
     }
     
+    func goToBoardView() {
+        router.showBoardView()
+    }
+    
     //MARK: - Interactor Output
     func didFinishObtainingFormattedString(_ string: String) {
         

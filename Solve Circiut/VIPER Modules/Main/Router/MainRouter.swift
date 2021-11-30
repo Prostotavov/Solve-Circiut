@@ -21,4 +21,8 @@ class MainRouter: MainRouterInput {
         
         view.present(alert, animated: true, completion: nil)
     }
+    
+    func showBoardView() {
+        view.present(BoardViewController(), animated: true, completion: nil)
+    }
 }
