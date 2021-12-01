@@ -13,19 +13,7 @@ class MainPresenter: MainViewOutput, MainInteractorOutput {
     var interactor: MainInteractorInput!
     var router: MainRouterInput!
     
-    //MARK: - View Output
-    func didPressedAtcion() {
-        interactor.obtainFormatterString()
-    }
-    
     func goToBoardView() {
         router.showBoardView()
-    }
-    
-    //MARK: - Interactor Output
-    func didFinishObtainingFormattedString(_ string: String) {
-        
-        view.showFormattedString(string)
-        router.showOkAlert()
     }
 }

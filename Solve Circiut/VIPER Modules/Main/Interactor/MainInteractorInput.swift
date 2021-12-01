@@ -9,5 +9,4 @@ import Foundation
 
 protocol MainInteractorInput: AnyObject {
 
-    func obtainFormatterString()
 }

@@ -8,7 +8,6 @@
 import Foundation
 
 protocol MainViewInput: AnyObject {
-    
-    func showFormattedString(_ string: String)
+
     func goToBoardView()
 }
