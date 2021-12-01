@@ -54,6 +54,13 @@ class DevicesBarView: UIView {
         resistorView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: distanceFromLeading)
         ])
     }
+    
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        resistorView.frame.size = CGSize(width: resistorWidth * currentZoomValue,
+                                         height: resistorHeight * currentZoomValue)
+    }
 }
 
 
@@ -64,6 +71,8 @@ extension DevicesBarView {
         let location = touch.location(in: resistorView)
         if resistorView.bounds.contains(location) {
             isDragging = true
+            currentZoomValue = delegate.getCurrentZoomValue()
+            layoutSubviews()
         }
     }
     
@@ -76,6 +85,9 @@ extension DevicesBarView {
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         isDragging = false
+        currentZoomValue = 1
+        layoutSubviews()
+        
         resistorView.frame.origin.x = self.bounds.origin.x + distanceFromLeading
         resistorView.frame.origin.y = self.bounds.origin.y + distanceFromTop
     }

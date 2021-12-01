@@ -74,7 +74,7 @@ extension BoardViewController {
         boardScrollView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             boardScrollView.topAnchor.constraint(equalTo: view.topAnchor),
-            boardScrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            boardScrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant:  -devicesViewHeight),
             boardScrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             boardScrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
