@@ -1,9 +1,8 @@
 //
-//  ImageScrollView.swift
-//  ScrollingApp
+//  BoardScrollView.swift
+//  Solve Circiut
 //
-//  Created by Алексей Пархоменко on 30/09/2019.
-//  Copyright © 2019 Алексей Пархоменко. All rights reserved.
+//  Created by MacBook Pro on 9.11.21.
 //
 
 import UIKit

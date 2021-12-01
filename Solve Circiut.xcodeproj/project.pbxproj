@@ -218,8 +218,8 @@
 		AA231F082755A17400735F32 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AA231F092755A17400735F32 /* BoardViewInput.swift */,
 				AA231F0A2755A17400735F32 /* BoardViewController.swift */,
+				AA231F092755A17400735F32 /* BoardViewInput.swift */,
 				AA231F0B2755A17400735F32 /* BoardViewOutput.swift */,
 				AA231F1E2755A28300735F32 /* BoardScrollView.swift */,
 				AA231F202755A28E00735F32 /* BoardView.swift */,

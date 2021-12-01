@@ -25,8 +25,8 @@ class BoardPresenter: BoardViewOutput, BoardInteractorOutput {
         interactor.getPointSize()
     }
     
-    func getDistance() -> Int {
-        interactor.getDistance()
+    func getDistanceBetweenPoints() -> Int {
+        interactor.getDistanceBetweenPoints()
     }
     
 }

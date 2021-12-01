@@ -64,7 +64,7 @@ extension BoardViewController {
         output.getPointSize()
     }
     
-    func getDistance() -> Int {
-        output.getDistance()
+    func getDistanceBetweenPoints() -> Int {
+        output.getDistanceBetweenPoints()
     }
 }

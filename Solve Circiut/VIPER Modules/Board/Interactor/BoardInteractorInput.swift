@@ -12,5 +12,5 @@ protocol BoardInteractorInput: AnyObject {
     func createPoints() -> [[Point]]
     func getBoardContentSize() -> CGSize
     func getPointSize() -> CGSize
-    func getDistance() -> Int
+    func getDistanceBetweenPoints() -> Int
 }

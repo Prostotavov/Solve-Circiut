@@ -1,6 +1,6 @@
 //
 //  PlateView.swift
-//  Plate
+//  Solve Circuit
 //
 //  Created by MacBook Pro on 9.11.21.
 //
@@ -10,7 +10,7 @@ import UIKit
 protocol BoardViewDelegate {
     func createPoints() -> [[Point]]
     func getPointSize() -> CGSize
-    func getDistance() -> Int
+    func getDistanceBetweenPoints() -> Int
 }
 
 class BoardView: UIView {
@@ -29,7 +29,7 @@ class BoardView: UIView {
     
     func showPoints() {
         let pointSize: CGSize = delegate.getPointSize()
-        let distance: Int = delegate.getDistance()
+        let distance: Int = delegate.getDistanceBetweenPoints()
         let points = delegate.createPoints()
         for linePoints in points {
             for point in linePoints {

@@ -16,12 +16,12 @@ class BoardInteractor: BoardInteractorInput {
         dataManager.pointSize
     }
     
-    func getDistance() -> Int {
-        dataManager.distance
+    func getDistanceBetweenPoints() -> Int {
+        dataManager.distanceBetweenPoints
     }
     
     func getBoardContentSize() -> CGSize {
-        let distance = dataManager.distance
+        let distance = dataManager.distanceBetweenPoints
         let size = CGSize(width: (dataManager.pointsCountInRow + 1) * distance,
                           height: (dataManager.pointsCountInColumn + 1) * distance)
         return size
