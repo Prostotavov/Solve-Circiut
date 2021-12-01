@@ -25,26 +25,29 @@ class BoardViewController: UIViewController, BoardViewInput, BoardViewDelegate, 
         devicesBarView.delegate = self
         setBoardView()
         view.addSubview(devicesBarView)
-        setupDevicesView()
+        setupDevicesViewConstraints()
         
     }
     
     func setBoardView() {
-        let boardViewContentSize: CGSize = output.getBoardContentSize()
-        let origin: CGPoint = CGPoint(x: 0, y: 0)
         boardView.showPoints()
         
         boardScrollView = BoardScrollView(frame: view.bounds)
         view.addSubview(boardScrollView)
-        setupImageScrollView()
+        setupImageScrollViewConstraints()
         
-        boardView.frame = CGRect(origin: origin, size: view.bounds.size)
-        boardScrollView.setBoardView(view: boardView)
-        
-        boardView.bounds.size = boardViewContentSize
-        boardScrollView.contentSize = boardViewContentSize
+        boardView.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: output.getBoardContentSize())
+        boardScrollView.addSubview(view: boardView)
     }
     
+}
+
+// extension for DevicesBarViewDelegate functions
+extension BoardViewController {
+    
+    func getCurrentZoomValue() -> CGFloat {
+        boardScrollView.getCurrentZoomValue()
+    }
 }
 
 // extension for BoardViewDelegate functions
@@ -66,7 +69,7 @@ extension BoardViewController {
 // extension for setup constraints
 extension BoardViewController {
     
-    func setupImageScrollView() {
+    func setupImageScrollViewConstraints() {
         
         boardScrollView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -77,7 +80,7 @@ extension BoardViewController {
         ])
     }
     
-    func setupDevicesView() {
+    func setupDevicesViewConstraints() {
         devicesBarView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
         devicesBarView.bottomAnchor.constraint(equalTo: view.bottomAnchor),

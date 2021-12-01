@@ -10,8 +10,6 @@ import UIKit
 class BoardScrollView: UIScrollView, UIScrollViewDelegate {
 
     var zoomView = UIView()
-    
-    var zoomValue: CGFloat = 2.5
 
     lazy var zoomingTap: UITapGestureRecognizer = {
         let zoomingTap = UITapGestureRecognizer(target: self, action: #selector(handleZoomingTap))
@@ -32,7 +30,7 @@ class BoardScrollView: UIScrollView, UIScrollViewDelegate {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setBoardView(view: UIView) {
+    func addSubview(view: UIView) {
         
         zoomView.removeFromSuperview()
         zoomView = view
@@ -41,22 +39,12 @@ class BoardScrollView: UIScrollView, UIScrollViewDelegate {
         
     }
     
-    func configurateFor(imageSize: CGSize) {
-        self.contentSize = imageSize
-        
-        setCurrentMaxandMinZoomScale()
-        self.zoomScale = self.minimumZoomScale
-        
-        self.zoomView.addGestureRecognizer(self.zoomingTap)
-        self.zoomView.isUserInteractionEnabled = true
-
-    }
-    
     func configurateFor(viewSize: CGSize) {
         self.contentSize = viewSize
         
-        setCurrentMaxandMinZoomScale()
-        self.zoomScale = self.minimumZoomScale
+        self.minimumZoomScale = 1
+        self.maximumZoomScale = 2
+        self.zoomScale = minimumZoomScale
         
         self.zoomView.addGestureRecognizer(self.zoomingTap)
         self.zoomView.isUserInteractionEnabled = true
@@ -69,27 +57,9 @@ class BoardScrollView: UIScrollView, UIScrollViewDelegate {
     }
     
     
-    func setCurrentMaxandMinZoomScale() {
-        let boundsSize = self.bounds.size
-        let imageSize = zoomView.bounds.size
-        
-        let xScale = boundsSize.width / imageSize.width
-        let yScale = boundsSize.height / imageSize.height
-        let minScale = min(xScale, yScale)
-        
-        var maxScale: CGFloat = 1.0 * zoomValue
-        if minScale < 0.1 * zoomValue {
-            maxScale = 0.3 * zoomValue
-        }
-        if minScale >= 0.1 * zoomValue && minScale < 0.5 * zoomValue {
-            maxScale = 0.7 * zoomValue
-        }
-        if minScale >= 0.5 * zoomValue {
-            maxScale = max(1.0 * zoomValue, minScale)
-        }
-        
-        self.minimumZoomScale = minScale
-        self.maximumZoomScale = maxScale
+    func getCurrentZoomValue() -> CGFloat {
+        print(zoomView.frame.width / zoomView.bounds.width)
+        return zoomView.frame.width / zoomView.bounds.width
     }
     
     func centerImage() {

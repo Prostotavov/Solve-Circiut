@@ -28,16 +28,23 @@ class BoardView: UIView {
     }
     
     func showPoints() {
+        
         let pointSize: CGSize = delegate.getPointSize()
         let distance: Int = delegate.getDistanceBetweenPoints()
         let points = delegate.createPoints()
-        for linePoints in points {
-            for point in linePoints {
+        
+        for rowPoints in points {
+            for point in rowPoints {
                 point.bounds.size = pointSize
                 point.center = CGPoint(x: (point.x + 1) * distance, y: (point.y + 1) * distance)
                 self.addSubview(point)
             }
         }
+        
+    }
+    
+    func addElectronicDevice() {
+        
     }
     
 }

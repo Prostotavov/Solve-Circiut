@@ -8,7 +8,7 @@
 import UIKit
 
 protocol DevicesBarViewDelegate {
-    
+    func getCurrentZoomValue() -> CGFloat
 }
 
 class DevicesBarView: UIView {
@@ -18,6 +18,7 @@ class DevicesBarView: UIView {
     let resistorWidth: CGFloat = 20
     let distanceFromTop: CGFloat = 20
     let distanceFromLeading: CGFloat = 50
+    var currentZoomValue: CGFloat = 1
     
     var delegate: DevicesBarViewDelegate!
     
@@ -44,6 +45,7 @@ class DevicesBarView: UIView {
 
     
     func setResistorView() {
+        
         resistorView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
         resistorView.widthAnchor.constraint(equalToConstant: resistorWidth),
