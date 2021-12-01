@@ -69,7 +69,7 @@ extension DevicesBarView {
         guard isDragging, let touch = touches.first  else {return}
         let location = touch.location(in: self)
         resistorView.frame.origin.x = location.x - (resistorView.frame.size.width / 2)
-        resistorView.frame.origin.y = location.y - (resistorView.frame.size.height / 2)
+        resistorView.frame.origin.y = location.y - (resistorView.frame.size.height / 2) * 3.5
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
