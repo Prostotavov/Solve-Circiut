@@ -45,8 +45,6 @@ class BoardViewController: UIViewController, BoardViewInput, BoardViewDelegate, 
         boardScrollView.contentSize = boardViewContentSize
     }
     
-    
-    
 }
 
 // extension for BoardViewDelegate functions
