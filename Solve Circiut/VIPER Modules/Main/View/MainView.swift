@@ -14,13 +14,14 @@ protocol MainViewDelegate {
 class MainView: UIView {
     
     let buttonHeight: CGFloat = 50
-    let buttonWidth: CGFloat = 100
+    let buttonWidth: CGFloat = 130
     
     var goToBoardButton = UIButton()
     var delegate: MainViewDelegate!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        backgroundColor = .lightGray
         setGoToBoardButton()
         goToBoardButton.addTarget(self, action: #selector(goToBoardView), for: .touchUpInside)
     }
@@ -36,8 +37,8 @@ class MainView: UIView {
         goToBoardButton.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            goToBoardButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 100),
-            goToBoardButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 100),
+            goToBoardButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            goToBoardButton.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             goToBoardButton.heightAnchor.constraint(equalToConstant: buttonHeight),
             goToBoardButton.widthAnchor.constraint(equalToConstant: buttonWidth)
         ])

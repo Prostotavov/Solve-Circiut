@@ -7,23 +7,28 @@
 
 import UIKit
 
-class BoardViewController: UIViewController, BoardViewInput, BoardViewDelegate {
-
+class BoardViewController: UIViewController, BoardViewInput, BoardViewDelegate, DevicesBarViewDelegate {
+    
     var output: BoardViewOutput!
     var assembler: BoardAssemblyProtocol = BoardAssembly()
     
     var boardScrollView = BoardScrollView()
     var boardView = BoardView()
+    var devicesBarView = DevicesBarView()
+    let devicesViewHeight: CGFloat = 100
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.systemBlue
         assembler.assembly(with: self)
         boardView.delegate = self
+        devicesBarView.delegate = self
         setBoardView()
+        view.addSubview(devicesBarView)
+        setupDevicesView()
         
     }
-
+    
     func setBoardView() {
         let boardViewContentSize: CGSize = output.getBoardContentSize()
         let origin: CGPoint = CGPoint(x: 0, y: 0)
@@ -40,20 +45,11 @@ class BoardViewController: UIViewController, BoardViewInput, BoardViewDelegate {
         boardScrollView.contentSize = boardViewContentSize
     }
     
-    func setupImageScrollView() {
-        
-        boardScrollView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            boardScrollView.topAnchor.constraint(equalTo: view.topAnchor),
-            boardScrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            boardScrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            boardScrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-        ])
-    }
-
+    
+    
 }
 
-// extension for delegate functions
+// extension for BoardViewDelegate functions
 extension BoardViewController {
     
     func createPoints() -> [[Point]] {
@@ -66,5 +62,29 @@ extension BoardViewController {
     
     func getDistanceBetweenPoints() -> Int {
         output.getDistanceBetweenPoints()
+    }
+}
+
+// extension for setup constraints
+extension BoardViewController {
+    
+    func setupImageScrollView() {
+        
+        boardScrollView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            boardScrollView.topAnchor.constraint(equalTo: view.topAnchor),
+            boardScrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            boardScrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            boardScrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
+    }
+    
+    func setupDevicesView() {
+        devicesBarView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+        devicesBarView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+        devicesBarView.widthAnchor.constraint(equalTo: view.widthAnchor),
+        devicesBarView.heightAnchor.constraint(equalToConstant: devicesViewHeight)
+        ])
     }
 }

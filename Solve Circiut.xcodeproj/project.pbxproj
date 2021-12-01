@@ -38,6 +38,7 @@
 		AA231F1F2755A28300735F32 /* BoardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231F1E2755A28300735F32 /* BoardScrollView.swift */; };
 		AA231F212755A28E00735F32 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231F202755A28E00735F32 /* BoardView.swift */; };
 		AAD0CA202756EFEE009232D5 /* BoardEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD0CA1F2756EFEE009232D5 /* BoardEntity.swift */; };
+		AAD0CA222756FB45009232D5 /* DevicesBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD0CA212756FB45009232D5 /* DevicesBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		AA231F1E2755A28300735F32 /* BoardScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardScrollView.swift; sourceTree = "<group>"; };
 		AA231F202755A28E00735F32 /* BoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
 		AAD0CA1F2756EFEE009232D5 /* BoardEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardEntity.swift; sourceTree = "<group>"; };
+		AAD0CA212756FB45009232D5 /* DevicesBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicesBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +225,7 @@
 				AA231F0B2755A17400735F32 /* BoardViewOutput.swift */,
 				AA231F1E2755A28300735F32 /* BoardScrollView.swift */,
 				AA231F202755A28E00735F32 /* BoardView.swift */,
+				AAD0CA212756FB45009232D5 /* DevicesBarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				AA231E042755368700735F32 /* AppDelegate.swift in Sources */,
 				AA231F192755A17400735F32 /* BoardInteractorInput.swift in Sources */,
 				AA231E062755368700735F32 /* SceneDelegate.swift in Sources */,
+				AAD0CA222756FB45009232D5 /* DevicesBarView.swift in Sources */,
 				AA231EF8275588E000735F32 /* MainRouterInput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

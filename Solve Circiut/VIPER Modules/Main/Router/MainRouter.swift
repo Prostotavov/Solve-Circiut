@@ -12,6 +12,8 @@ class MainRouter: MainRouterInput {
     weak var view: UIViewController!
     
     func showBoardView() {
-        view.present(BoardViewController(), animated: true, completion: nil)
+        let boardVC = BoardViewController()
+        boardVC.modalPresentationStyle = .fullScreen
+        view.present(boardVC, animated: true)
     }
 }
