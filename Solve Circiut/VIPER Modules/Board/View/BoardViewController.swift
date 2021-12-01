@@ -52,6 +52,12 @@ extension BoardViewController {
     func getCurrentZoomValue() -> CGFloat {
         boardScrollView.getCurrentZoomValue()
     }
+    
+    func getBoardViewFrame() -> CGRect {
+        var boardViewFrame = boardScrollView.frame
+        boardViewFrame.origin.y -= view.frame.height - devicesViewHeight - 35
+        return boardViewFrame
+    }
 }
 
 // extension for BoardViewDelegate functions

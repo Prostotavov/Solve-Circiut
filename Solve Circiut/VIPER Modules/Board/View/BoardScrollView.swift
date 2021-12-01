@@ -124,7 +124,6 @@ class BoardScrollView: UIScrollView, UIScrollViewDelegate {
 extension BoardScrollView {
     
     func getCurrentZoomValue() -> CGFloat {
-        print(zoomView.frame.width / zoomView.bounds.width)
         return zoomView.frame.width / zoomView.bounds.width
     }
     
