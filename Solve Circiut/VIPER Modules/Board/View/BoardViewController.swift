@@ -45,6 +45,10 @@ class BoardViewController: UIViewController, BoardViewInput, BoardViewDelegate, 
 // extension for DevicesBarViewDelegate functions
 extension BoardViewController {
     
+    func isZooming() -> Bool {
+        boardScrollView.isZooming
+    }
+    
     func getCurrentZoomValue() -> CGFloat {
         boardScrollView.getCurrentZoomValue()
     }

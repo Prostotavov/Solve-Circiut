@@ -56,12 +56,6 @@ class BoardScrollView: UIScrollView, UIScrollViewDelegate {
         self.centerImage()
     }
     
-    
-    func getCurrentZoomValue() -> CGFloat {
-        print(zoomView.frame.width / zoomView.bounds.width)
-        return zoomView.frame.width / zoomView.bounds.width
-    }
-    
     func centerImage() {
         let boundsSize = self.bounds.size
         var frameToCenter = zoomView.frame
@@ -125,3 +119,14 @@ class BoardScrollView: UIScrollView, UIScrollViewDelegate {
     }
     
 }
+
+// functions not related to scaling
+extension BoardScrollView {
+    
+    func getCurrentZoomValue() -> CGFloat {
+        print(zoomView.frame.width / zoomView.bounds.width)
+        return zoomView.frame.width / zoomView.bounds.width
+    }
+    
+}
+

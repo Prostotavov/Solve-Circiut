@@ -9,6 +9,7 @@ import UIKit
 
 protocol DevicesBarViewDelegate {
     func getCurrentZoomValue() -> CGFloat
+    func isZooming() -> Bool
 }
 
 class DevicesBarView: UIView {
@@ -23,6 +24,7 @@ class DevicesBarView: UIView {
     var delegate: DevicesBarViewDelegate!
     
     private var isDragging = false
+    var isZooming = false
     
     var resistorView: UIImageView = {
         var resistorImage = UIImage(named: "resistor")
@@ -81,13 +83,20 @@ extension DevicesBarView {
         let location = touch.location(in: self)
         resistorView.frame.origin.x = location.x - (resistorView.frame.size.width / 2)
         resistorView.frame.origin.y = location.y - (resistorView.frame.size.height / 2) * 3.5
+        if  delegate.isZooming() {
+            returnDeviceOntoBar()
+        }
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        returnDeviceOntoBar()
+    }
+    
+    func returnDeviceOntoBar() {
         isDragging = false
+        isZooming = false
         currentZoomValue = 1
         layoutSubviews()
-        
         resistorView.frame.origin.x = self.bounds.origin.x + distanceFromLeading
         resistorView.frame.origin.y = self.bounds.origin.y + distanceFromTop
     }
