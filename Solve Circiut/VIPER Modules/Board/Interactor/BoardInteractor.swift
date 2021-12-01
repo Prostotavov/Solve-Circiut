@@ -12,36 +12,31 @@ class BoardInteractor: BoardInteractorInput {
     weak var output: BoardInteractorOutput!
     var dataManager: DataManager!
     
-    //constants
-    let pointsCountInRow: Int = 50
-    let pointsCountInColumn: Int = 50
-    let pointImage = UIImage(systemName: "seal")
-    let pointSize: CGSize = CGSize(width: 5, height: 5)
-    let distance = 30
-    
     func getPointSize() -> CGSize {
-        pointSize
+        dataManager.pointSize
     }
     
     func getDistance() -> Int {
-        distance
+        dataManager.distance
     }
     
     func getBoardContentSize() -> CGSize {
-        let size: CGSize =  CGSize(width: (pointsCountInRow + 1) * distance, height: (pointsCountInColumn + 1) * distance)
+        let distance = dataManager.distance
+        let size = CGSize(width: (dataManager.pointsCountInRow + 1) * distance,
+                          height: (dataManager.pointsCountInColumn + 1) * distance)
         return size
     }
 
-    func createPoints() -> [[PointProtocol]] {
+    func createPoints() -> [[Point]] {
         
-        var points = [[PointProtocol]]()
-        for x in 0..<pointsCountInRow {
+        var points = dataManager.points
+        for x in 0..<dataManager.pointsCountInRow {
             
-            var linePoints = [Point]()
+            var linePoints = [PointImplementation]()
             
-            for y in 0..<pointsCountInColumn {
-                let point = Point()
-                point.image = pointImage
+            for y in 0..<dataManager.pointsCountInColumn {
+                let point = PointImplementation()
+                point.image = dataManager.pointImage
                 
                 point.x = x
                 point.y = y

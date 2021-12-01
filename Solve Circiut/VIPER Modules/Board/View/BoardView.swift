@@ -8,7 +8,7 @@
 import UIKit
 
 protocol BoardViewDelegate {
-    func createPoints() -> [[PointProtocol]]
+    func createPoints() -> [[Point]]
     func getPointSize() -> CGSize
     func getDistance() -> Int
 }

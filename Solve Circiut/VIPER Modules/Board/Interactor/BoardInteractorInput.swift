@@ -9,7 +9,7 @@ import UIKit
 
 protocol BoardInteractorInput: AnyObject {
 
-    func createPoints() -> [[PointProtocol]]
+    func createPoints() -> [[Point]]
     func getBoardContentSize() -> CGSize
     func getPointSize() -> CGSize
     func getDistance() -> Int

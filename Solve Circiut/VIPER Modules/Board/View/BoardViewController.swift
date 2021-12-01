@@ -56,7 +56,7 @@ class BoardViewController: UIViewController, BoardViewInput, BoardViewDelegate {
 // extension for delegate functions
 extension BoardViewController {
     
-    func createPoints() -> [[PointProtocol]] {
+    func createPoints() -> [[Point]] {
         return output.createPoints()
     }
     

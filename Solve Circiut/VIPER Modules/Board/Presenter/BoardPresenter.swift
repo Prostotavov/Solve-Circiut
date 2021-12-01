@@ -13,7 +13,7 @@ class BoardPresenter: BoardViewOutput, BoardInteractorOutput {
     var interactor: BoardInteractorInput!
     var router: BoardRouterInput!
     
-    func createPoints() -> [[PointProtocol]] {
+    func createPoints() -> [[Point]] {
         interactor.createPoints()
     }
     
