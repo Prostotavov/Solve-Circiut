@@ -29,4 +29,8 @@ class BoardPresenter: BoardViewOutput, BoardInteractorOutput {
         interactor.getDistanceBetweenPoints()
     }
     
+    func getDevices() -> [ElectronicDevices] {
+        interactor.getDevices()
+    }
+    
 }

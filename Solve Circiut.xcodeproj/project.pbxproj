@@ -37,6 +37,7 @@
 		AA231F1D2755A17400735F32 /* BoardRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231F122755A17400735F32 /* BoardRouterInput.swift */; };
 		AA231F1F2755A28300735F32 /* BoardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231F1E2755A28300735F32 /* BoardScrollView.swift */; };
 		AA231F212755A28E00735F32 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231F202755A28E00735F32 /* BoardView.swift */; };
+		AAB34891275A47A800D6A490 /* ResistorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB34890275A47A800D6A490 /* ResistorView.swift */; };
 		AAD0CA202756EFEE009232D5 /* BoardEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD0CA1F2756EFEE009232D5 /* BoardEntity.swift */; };
 		AAD0CA222756FB45009232D5 /* DevicesBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD0CA212756FB45009232D5 /* DevicesBarView.swift */; };
 		AAD0CA2C275793E9009232D5 /* Resistor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD0CA26275793E9009232D5 /* Resistor.swift */; };
@@ -79,6 +80,7 @@
 		AA231F122755A17400735F32 /* BoardRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardRouterInput.swift; sourceTree = "<group>"; };
 		AA231F1E2755A28300735F32 /* BoardScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardScrollView.swift; sourceTree = "<group>"; };
 		AA231F202755A28E00735F32 /* BoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
+		AAB34890275A47A800D6A490 /* ResistorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResistorView.swift; sourceTree = "<group>"; };
 		AAD0CA1F2756EFEE009232D5 /* BoardEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardEntity.swift; sourceTree = "<group>"; };
 		AAD0CA212756FB45009232D5 /* DevicesBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicesBarView.swift; sourceTree = "<group>"; };
 		AAD0CA26275793E9009232D5 /* Resistor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resistor.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 				AA231F1E2755A28300735F32 /* BoardScrollView.swift */,
 				AA231F202755A28E00735F32 /* BoardView.swift */,
 				AAD0CA212756FB45009232D5 /* DevicesBarView.swift */,
+				AAB34890275A47A800D6A490 /* ResistorView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				AAD0CA2E275793E9009232D5 /* SuperElectronicDevice.swift in Sources */,
 				AA231EF2275588E000735F32 /* MainViewInput.swift in Sources */,
 				AA231EF1275588E000735F32 /* MainPresenter.swift in Sources */,
+				AAB34891275A47A800D6A490 /* ResistorView.swift in Sources */,
 				AA231F1B2755A17400735F32 /* BoardInteractorOutput.swift in Sources */,
 				AA231E6C27557B9E00735F32 /* Data Manager.swift in Sources */,
 				AAD0CA2C275793E9009232D5 /* Resistor.swift in Sources */,

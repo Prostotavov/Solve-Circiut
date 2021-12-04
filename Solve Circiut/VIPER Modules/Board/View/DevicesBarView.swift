@@ -10,7 +10,8 @@ import UIKit
 protocol DevicesBarViewDelegate {
     func getCurrentZoomValue() -> CGFloat
     func isZooming() -> Bool
-    func getBoardViewFrame() -> CGRect
+    var boardView: BoardView {get set}
+    func addElectronicDevice(device: UIView, on point: CGPoint)
 }
 
 class DevicesBarView: UIView {
@@ -57,6 +58,15 @@ class DevicesBarView: UIView {
         ])
     }
     
+    func createResistor() -> UIView{
+        let resistorImage = UIImage(named: "resistor")
+        let imageView = UIImageView(image: resistorImage)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.isUserInteractionEnabled = true
+        imageView.bounds.size = CGSize(width: resistorWidth, height: resistorHeight)
+        return imageView
+    }
+    
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -89,15 +99,14 @@ extension DevicesBarView {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-        if delegate.getBoardViewFrame().contains(resistorView.frame) {
-//            print("BFA \(delegate.getBoardViewFrame())")
-//            print("RFA \(resistorView.frame)")
-        } else {
-//            print("BF \(delegate.getBoardViewFrame())")
-//            print("RF \(resistorView.frame)")
+        guard isDragging, let touch = touches.first  else {return}
+        var location = touch.location(in: delegate.boardView)
+        location.x = location.x - (resistorView.frame.size.width / 2)
+        location.y = location.y - (resistorView.frame.size.height / 2) * 3.5
+        if  location.x > 0, location.y > 0 {
+            print("location \(location)")
+            addElectronicDevice(device: createResistor(), on: location)
         }
-
         returnDeviceOntoBar()
     }
     
@@ -107,6 +116,10 @@ extension DevicesBarView {
         layoutSubviews()
         resistorView.frame.origin.x = self.bounds.origin.x + distanceFromLeading
         resistorView.frame.origin.y = self.bounds.origin.y + distanceFromTop
+    }
+    
+    func addElectronicDevice(device: UIView, on point: CGPoint) {
+        delegate.addElectronicDevice(device: device, on: point)
     }
     
 }

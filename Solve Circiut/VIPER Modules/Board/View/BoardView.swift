@@ -11,6 +11,7 @@ protocol BoardViewDelegate {
     func createPoints() -> [[Point]]
     func getPointSize() -> CGSize
     func getDistanceBetweenPoints() -> Int
+    func getDevices() -> [ElectronicDevices]
 }
 
 class BoardView: UIView {
@@ -32,6 +33,7 @@ class BoardView: UIView {
         let pointSize: CGSize = delegate.getPointSize()
         let distance: Int = delegate.getDistanceBetweenPoints()
         let points = delegate.createPoints()
+        let devices = delegate.getDevices()
         
         for rowPoints in points {
             for point in rowPoints {
@@ -40,12 +42,11 @@ class BoardView: UIView {
                 self.addSubview(point)
             }
         }
-        
     }
     
-    func addElectronicDevice() {
-        
+    func addElectronicDevice(device: UIView, on point: CGPoint) {
+        device.frame.origin = point
+        self.addSubview(device)
     }
     
 }
-

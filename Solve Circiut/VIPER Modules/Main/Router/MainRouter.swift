@@ -14,6 +14,7 @@ class MainRouter: MainRouterInput {
     func showBoardView() {
         let boardVC = BoardViewController()
         boardVC.modalPresentationStyle = .fullScreen
+//        view.navigationController?.pushViewController(boardVC, animated: true)
         view.present(boardVC, animated: true)
     }
 }

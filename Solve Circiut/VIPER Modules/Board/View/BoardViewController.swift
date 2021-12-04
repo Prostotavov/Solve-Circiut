@@ -26,7 +26,6 @@ class BoardViewController: UIViewController, BoardViewInput, BoardViewDelegate, 
         setBoardView()
         view.addSubview(devicesBarView)
         setupDevicesViewConstraints()
-        
     }
     
     func setBoardView() {
@@ -38,6 +37,10 @@ class BoardViewController: UIViewController, BoardViewInput, BoardViewDelegate, 
         
         boardView.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: output.getBoardContentSize())
         boardScrollView.addSubview(view: boardView)
+    }
+    
+    func getDevices() -> [ElectronicDevices] {
+        output.getDevices()
     }
     
 }
@@ -53,10 +56,9 @@ extension BoardViewController {
         boardScrollView.getCurrentZoomValue()
     }
     
-    func getBoardViewFrame() -> CGRect {
-        var boardViewFrame = boardScrollView.frame
-        boardViewFrame.origin.y -= view.frame.height - devicesViewHeight - 35
-        return boardViewFrame
+    func addElectronicDevice(device: UIView, on point: CGPoint) {
+        boardView.addElectronicDevice(device: device, on: point)
+//        self.view.layoutIfNeeded()
     }
 }
 

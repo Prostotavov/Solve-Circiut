@@ -15,6 +15,7 @@ protocol DataManager {
     var pointSize: CGSize {get set}
     var distanceBetweenPoints: Int {get set}
     var points: [[Point]] {get set}
+    var devices: [ElectronicDevices] {get set}
 }
 
 class DataManagerImplementation: DataManager {
@@ -25,8 +26,5 @@ class DataManagerImplementation: DataManager {
     var pointSize: CGSize = CGSize(width: 5, height: 5)
     var distanceBetweenPoints: Int = 30
     var points: [[Point]] = [[Point]]()
+    var devices: [ElectronicDevices] = [ElectronicDevices]()
 }
-
-
-
-

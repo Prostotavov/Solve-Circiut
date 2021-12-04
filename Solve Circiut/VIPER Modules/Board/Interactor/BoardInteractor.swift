@@ -48,4 +48,8 @@ class BoardInteractor: BoardInteractorInput {
         return points
     }
     
+    func getDevices() -> [ElectronicDevices] {
+        dataManager.devices
+    }
+    
 }
