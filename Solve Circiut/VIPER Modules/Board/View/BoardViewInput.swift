@@ -11,7 +11,8 @@ protocol BoardViewInput: AnyObject {
     
     func createPoints() -> [[Point]]
     func setBoardView()
-    func getDevices() -> [ElectronicDevices]
+    func getResistors() -> [Resistor]
+    func addResistor()
     
     func setupImageScrollViewConstraints()
     func setupDevicesViewConstraints()

@@ -11,7 +11,7 @@ protocol BoardViewDelegate {
     func createPoints() -> [[Point]]
     func getPointSize() -> CGSize
     func getDistanceBetweenPoints() -> Int
-    func getDevices() -> [ElectronicDevices]
+    func getResistors() -> [Resistor]
 }
 
 class BoardView: UIView {
@@ -33,7 +33,6 @@ class BoardView: UIView {
         let pointSize: CGSize = delegate.getPointSize()
         let distance: Int = delegate.getDistanceBetweenPoints()
         let points = delegate.createPoints()
-        let devices = delegate.getDevices()
         
         for rowPoints in points {
             for point in rowPoints {
@@ -44,9 +43,17 @@ class BoardView: UIView {
         }
     }
     
-    func addElectronicDevice(device: UIView, on point: CGPoint) {
-        device.frame.origin = point
-        self.addSubview(device)
+    func showResistors() {
+        let distance: CGFloat = CGFloat(delegate.getDistanceBetweenPoints())
+        let resistors = delegate.getResistors()
+        
+        for resistor in resistors {
+            
+            resistor.bounds.size = CGSize(width: 20, height: 60)
+            resistor.center = CGPoint(x: resistor.leadingPin.x * distance, y: resistor.leadingPin.y * distance)
+            print(resistor)
+            self.addSubview(resistor)
+        }
     }
     
 }

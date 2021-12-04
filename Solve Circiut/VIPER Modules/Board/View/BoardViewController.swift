@@ -30,6 +30,7 @@ class BoardViewController: UIViewController, BoardViewInput, BoardViewDelegate, 
     
     func setBoardView() {
         boardView.showPoints()
+        boardView.showResistors()
         
         boardScrollView = BoardScrollView(frame: view.bounds)
         view.addSubview(boardScrollView)
@@ -39,8 +40,14 @@ class BoardViewController: UIViewController, BoardViewInput, BoardViewDelegate, 
         boardScrollView.addSubview(view: boardView)
     }
     
-    func getDevices() -> [ElectronicDevices] {
-        output.getDevices()
+    func getResistors() -> [Resistor] {
+        output.getResistors()
+        
+    }
+    
+    func addResistor() {
+        output.addResistor()
+        boardView.showResistors()
     }
     
 }
@@ -54,11 +61,6 @@ extension BoardViewController {
     
     func getCurrentZoomValue() -> CGFloat {
         boardScrollView.getCurrentZoomValue()
-    }
-    
-    func addElectronicDevice(device: UIView, on point: CGPoint) {
-        boardView.addElectronicDevice(device: device, on: point)
-//        self.view.layoutIfNeeded()
     }
 }
 

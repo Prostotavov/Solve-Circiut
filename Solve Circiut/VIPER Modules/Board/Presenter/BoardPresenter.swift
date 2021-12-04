@@ -29,8 +29,12 @@ class BoardPresenter: BoardViewOutput, BoardInteractorOutput {
         interactor.getDistanceBetweenPoints()
     }
     
-    func getDevices() -> [ElectronicDevices] {
-        interactor.getDevices()
+    func getResistors() -> [Resistor] {
+        interactor.getResistors()
+    }
+    
+    func addResistor() {
+        interactor.addResistor()
     }
     
 }
