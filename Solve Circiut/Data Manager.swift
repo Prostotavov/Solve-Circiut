@@ -47,7 +47,7 @@ class DataManagerImplementation: DataManager {
     
     func createResistor(i: Int) -> Resistor {
         let resistorImage = UIImage(named: "resistor")
-        let resistor = ResistorImplementation()
+        let resistor = Resistor()
         resistor.leadingPin = CGPoint(x: 2, y: i * 2 + 1)
         resistor.trailingPin = CGPoint(x: 2, y: i * 2 + 3)
         resistor.setImage(resistorImage, for: .normal)
