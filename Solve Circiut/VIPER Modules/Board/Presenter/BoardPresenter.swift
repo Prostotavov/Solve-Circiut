@@ -37,4 +37,8 @@ class BoardPresenter: BoardViewOutput, BoardInteractorOutput {
         interactor.addResistor()
     }
     
+    func addResistorIn(location: CGPoint) {
+        interactor.addResistorIn(location: location)
+    }
+    
 }

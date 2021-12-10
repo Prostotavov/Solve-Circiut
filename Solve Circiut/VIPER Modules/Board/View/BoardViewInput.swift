@@ -5,7 +5,7 @@
 //  Created by MacBook Pro on 30.11.21.
 //
 
-import Foundation
+import UIKit
 
 protocol BoardViewInput: AnyObject {
     
@@ -13,6 +13,7 @@ protocol BoardViewInput: AnyObject {
     func setBoardView()
     func getResistors() -> [Resistor]
     func addResistor()
+    func addResistorIn(location: CGPoint)
     
     func setupImageScrollViewConstraints()
     func setupDevicesViewConstraints()

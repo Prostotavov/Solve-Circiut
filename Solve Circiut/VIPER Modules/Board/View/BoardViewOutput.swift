@@ -15,4 +15,5 @@ protocol BoardViewOutput: AnyObject {
     func getDistanceBetweenPoints() -> Int
     func getResistors() -> [Resistor]
     func addResistor()
+    func addResistorIn(location: CGPoint)
 }

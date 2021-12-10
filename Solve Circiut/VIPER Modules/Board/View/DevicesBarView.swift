@@ -12,6 +12,8 @@ protocol DevicesBarViewDelegate {
     func isZooming() -> Bool
     var boardView: BoardView {get set}
     func addResistor()
+    func addResistorIn(location: CGPoint)
+    func getDistanceBetweenPoints() -> Int
 }
 
 class DevicesBarView: UIView {
@@ -103,8 +105,17 @@ extension DevicesBarView {
         var location = touch.location(in: delegate.boardView)
         location.x = location.x - (resistorView.frame.size.width / 2)
         location.y = location.y - (resistorView.frame.size.height / 2) * 3.5
-        if  location.x > 0, location.y > 0 {
-            delegate.addResistor()
+        
+        var barLocation = touch.location(in: self)
+        barLocation.x = barLocation.x - (resistorView.frame.size.width / 2)
+        barLocation.y = barLocation.y + resistorView.frame.size.height
+            - (resistorView.frame.size.height / 2) * 3.5
+        
+         let distanceBetweenPoints = CGFloat(delegate.getDistanceBetweenPoints())
+        
+        if barLocation.y < 0, location.x > 0, location.y > distanceBetweenPoints {
+            delegate.addResistorIn(location: location)
+            print("Something")
         }
         returnDeviceOntoBar()
     }

@@ -17,29 +17,5 @@ class PointImplementation: UIImageView, Point {
     var y: Int = 0
 }
 
-//protocol Resistor: UIButton {
-//
-//    var leadingPin: CGPoint {get set}
-//    var trailingPin: CGPoint {get set}
-//}
-
-//class ResistorImplementation: UIButton, Resistor {
-//
-//    var leadingPin: CGPoint = CGPoint(x: 0, y: 0)
-//    var trailingPin: CGPoint = CGPoint(x: 0, y: 0)
-//
-//    init(frame: CGRect, leadingPin: CGPoint) {
-//        super.init(frame: frame)
-//    }
-//
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
-//    }
-//
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-//
-//}
 
 

@@ -21,6 +21,9 @@ protocol DataManager {
     func addResistor()
     func createResistor(i: Int) -> Resistor
     func createResistors()
+    
+    func createResistorIn(location: CGPoint) -> Resistor
+    func addResistorIn(location: CGPoint)
 }
 
 class DataManagerImplementation: DataManager {
@@ -32,7 +35,7 @@ class DataManagerImplementation: DataManager {
     var distanceBetweenPoints: Int = 30
     var points: [[Point]] = [[Point]]()
     var resistors: [Resistor] = [Resistor]()
-    var resistorsCount: Int = 3
+    var resistorsCount: Int = 0
     
     init() {
         createResistors()
@@ -40,9 +43,19 @@ class DataManagerImplementation: DataManager {
     
     func createResistors() {
         
-        for i in 1...resistorsCount {
-            resistors.append(createResistor(i: i))
-        }
+//        for i in 1...resistorsCount {
+//            resistors.append(createResistor(i: i))
+//        }
+    }
+    
+    func createResistorIn(location: CGPoint) -> Resistor {
+        let resistor = Resistor()
+        let resistorImage = UIImage(named: "resistor")
+        resistor.setImage(resistorImage, for: .normal)
+        resistor.leadingPin.x = round(location.x / CGFloat(distanceBetweenPoints))
+        resistor.leadingPin.y = round(location.y / CGFloat(distanceBetweenPoints)) + 1
+        
+        return resistor
     }
     
     func createResistor(i: Int) -> Resistor {
@@ -52,6 +65,11 @@ class DataManagerImplementation: DataManager {
         resistor.trailingPin = CGPoint(x: 2, y: i * 2 + 3)
         resistor.setImage(resistorImage, for: .normal)
         return resistor
+    }
+    
+    func addResistorIn(location: CGPoint) {
+        resistorsCount += 1
+        resistors.append(createResistorIn(location: location))
     }
     
     func addResistor() {

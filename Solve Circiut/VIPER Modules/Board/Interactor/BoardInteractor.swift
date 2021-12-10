@@ -48,6 +48,10 @@ class BoardInteractor: BoardInteractorInput {
         return points
     }
     
+    func addResistorIn(location: CGPoint) {
+        dataManager.addResistorIn(location: location)
+    }
+    
     func getResistors() -> [Resistor] {
         dataManager.resistors
     }

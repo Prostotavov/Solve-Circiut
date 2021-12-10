@@ -50,6 +50,11 @@ class BoardViewController: UIViewController, BoardViewInput, BoardViewDelegate, 
         boardView.showResistors()
     }
     
+    func addResistorIn(location: CGPoint) {
+        output.addResistorIn(location: location)
+        boardView.showResistors()
+    }
+    
 }
 
 // extension for DevicesBarViewDelegate functions
