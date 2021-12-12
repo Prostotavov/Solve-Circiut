@@ -51,7 +51,6 @@ class BoardView: UIView {
             
             resistor.bounds.size = CGSize(width: 20, height: 60)
             resistor.center = CGPoint(x: resistor.leadingPin.x * distance, y: resistor.leadingPin.y * distance)
-            print(resistor)
             self.addSubview(resistor)
         }
     }

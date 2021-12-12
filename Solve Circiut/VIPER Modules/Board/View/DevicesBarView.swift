@@ -103,19 +103,20 @@ extension DevicesBarView {
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard isDragging, let touch = touches.first  else {return}
         var location = touch.location(in: delegate.boardView)
-        location.x = location.x - (resistorView.frame.size.width / 2)
-        location.y = location.y - (resistorView.frame.size.height / 2) * 3.5
+        location.y = location.y - (resistorView.frame.size.height / 2) * 3.5 / delegate.getCurrentZoomValue()
         
         var barLocation = touch.location(in: self)
         barLocation.x = barLocation.x - (resistorView.frame.size.width / 2)
         barLocation.y = barLocation.y + resistorView.frame.size.height
-            - (resistorView.frame.size.height / 2) * 3.5
+        - (resistorView.frame.size.height / 2) * 3.5
         
          let distanceBetweenPoints = CGFloat(delegate.getDistanceBetweenPoints())
+        print("location \(location)")
+        print("         ")
         
         if barLocation.y < 0, location.x > 0, location.y > distanceBetweenPoints {
             delegate.addResistorIn(location: location)
-            print("Something")
+            
         }
         returnDeviceOntoBar()
     }
