@@ -102,26 +102,24 @@ extension DevicesBarView {
         returnDeviceOntoBar()
     }
     
-    // if the user pulls the device outside the board,
+    // if the user drop the device outside the board,
     // then the coordinates of the device take
     // an extreme value on the board
     func setResistorLocation(location: inout CGPoint) {
         
-        var settedLocation = CGPoint()
         let distanceBetweenPoints = BoardDataManagerImplementation.distanceBetweenPoints
-        let boardSize  = delegate.getBoardContentSize().width
+        let boardWidth  = delegate.getBoardContentSize().width
+        let boardHeight  = delegate.getBoardContentSize().height
         
         if location.x < distanceBetweenPoints {
-            settedLocation.x = distanceBetweenPoints
+            location.x = distanceBetweenPoints
+        } else if location.x > boardWidth {
+            location.x = boardWidth - distanceBetweenPoints
         }
         if location.y < distanceBetweenPoints {
-            settedLocation.y = distanceBetweenPoints
-        }
-        if location.x > boardSize {
-            settedLocation.x = boardSize - distanceBetweenPoints
-        }
-        if location.y > boardSize {
-            settedLocation.y = boardSize - distanceBetweenPoints * 3
+            location.y = distanceBetweenPoints
+        } else if location.y > boardHeight {
+            location.y = boardHeight - distanceBetweenPoints * 3
         }
     }
     
