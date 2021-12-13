@@ -40,18 +40,13 @@ class BoardViewController: UIViewController, BoardViewInput, BoardViewDelegate, 
         boardScrollView.addSubview(view: boardView)
     }
     
-    func getResistors() -> [Resistor] {
-        output.getResistors()
+    func getDevices() -> [ElectronicDevice] {
+        output.getDevices()
         
     }
     
-    func addResistor() {
-        output.addResistor()
-        boardView.showResistors()
-    }
-    
-    func addResistorIn(location: CGPoint) {
-        output.addResistorIn(location: location)
+    func add(device: ElectronicDevices, to location: CGPoint) {
+        output.add(device: device, to: location)
         boardView.showResistors()
     }
     
@@ -67,6 +62,10 @@ extension BoardViewController {
     func getCurrentZoomValue() -> CGFloat {
         boardScrollView.getCurrentZoomValue()
     }
+    
+    func getBoardContentSize() -> CGSize {
+        output.getBoardContentSize()
+    }
 }
 
 // extension for BoardViewDelegate functions
@@ -74,14 +73,6 @@ extension BoardViewController {
     
     func createPoints() -> [[Point]] {
         return output.createPoints()
-    }
-    
-    func getPointSize() -> CGSize {
-        output.getPointSize()
-    }
-    
-    func getDistanceBetweenPoints() -> Int {
-        output.getDistanceBetweenPoints()
     }
 }
 

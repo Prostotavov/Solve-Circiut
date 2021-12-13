@@ -15,7 +15,7 @@
 		AA231E062755368700735F32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231E052755368700735F32 /* SceneDelegate.swift */; };
 		AA231E0D2755368A00735F32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA231E0C2755368A00735F32 /* Assets.xcassets */; };
 		AA231E102755368A00735F32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA231E0E2755368A00735F32 /* LaunchScreen.storyboard */; };
-		AA231E6C27557B9E00735F32 /* Data Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231E6B27557B9E00735F32 /* Data Manager.swift */; };
+		AA231E6C27557B9E00735F32 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231E6B27557B9E00735F32 /* DataManager.swift */; };
 		AA231EF0275588E000735F32 /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231EE2275588E000735F32 /* MainAssembly.swift */; };
 		AA231EF1275588E000735F32 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231EE4275588E000735F32 /* MainPresenter.swift */; };
 		AA231EF2275588E000735F32 /* MainViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231EE6275588E000735F32 /* MainViewInput.swift */; };
@@ -41,7 +41,9 @@
 		AA231F1D2755A17400735F32 /* BoardRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231F122755A17400735F32 /* BoardRouterInput.swift */; };
 		AA231F1F2755A28300735F32 /* BoardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231F1E2755A28300735F32 /* BoardScrollView.swift */; };
 		AA231F212755A28E00735F32 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231F202755A28E00735F32 /* BoardView.swift */; };
-		AAB34891275A47A800D6A490 /* ResistorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB34890275A47A800D6A490 /* ResistorView.swift */; };
+		AAC7DB362767957200518A1F /* BoardDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC7DB352767957200518A1F /* BoardDataManager.swift */; };
+		AAC7DB39276795D200518A1F /* DevicesDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC7DB38276795D200518A1F /* DevicesDataManager.swift */; };
+		AAC7DB3B2767A37700518A1F /* BarResistorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC7DB3A2767A37700518A1F /* BarResistorView.swift */; };
 		AAD0CA202756EFEE009232D5 /* BoardEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD0CA1F2756EFEE009232D5 /* BoardEntity.swift */; };
 		AAD0CA222756FB45009232D5 /* DevicesBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD0CA212756FB45009232D5 /* DevicesBarView.swift */; };
 /* End PBXBuildFile section */
@@ -57,7 +59,7 @@
 		AA231E0C2755368A00735F32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA231E0F2755368A00735F32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA231E112755368A00735F32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AA231E6B27557B9E00735F32 /* Data Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data Manager.swift"; sourceTree = "<group>"; };
+		AA231E6B27557B9E00735F32 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		AA231EE2275588E000735F32 /* MainAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
 		AA231EE4275588E000735F32 /* MainPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		AA231EE6275588E000735F32 /* MainViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewInput.swift; sourceTree = "<group>"; };
@@ -83,7 +85,9 @@
 		AA231F122755A17400735F32 /* BoardRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardRouterInput.swift; sourceTree = "<group>"; };
 		AA231F1E2755A28300735F32 /* BoardScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardScrollView.swift; sourceTree = "<group>"; };
 		AA231F202755A28E00735F32 /* BoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
-		AAB34890275A47A800D6A490 /* ResistorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResistorView.swift; sourceTree = "<group>"; };
+		AAC7DB352767957200518A1F /* BoardDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardDataManager.swift; sourceTree = "<group>"; };
+		AAC7DB38276795D200518A1F /* DevicesDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesDataManager.swift; sourceTree = "<group>"; };
+		AAC7DB3A2767A37700518A1F /* BarResistorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarResistorView.swift; sourceTree = "<group>"; };
 		AAD0CA1F2756EFEE009232D5 /* BoardEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardEntity.swift; sourceTree = "<group>"; };
 		AAD0CA212756FB45009232D5 /* DevicesBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicesBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,7 +135,7 @@
 			children = (
 				AAD0CA23275793AB009232D5 /* Factories */,
 				AA231E17275536CE00735F32 /* VIPER Modules */,
-				AA231E6B27557B9E00735F32 /* Data Manager.swift */,
+				AAC7DB37276795A500518A1F /* Data Managers */,
 				AA231E052755368700735F32 /* SceneDelegate.swift */,
 				AA231E032755368700735F32 /* AppDelegate.swift */,
 				AA231E0C2755368A00735F32 /* Assets.xcassets */,
@@ -248,7 +252,7 @@
 				AA231F1E2755A28300735F32 /* BoardScrollView.swift */,
 				AA231F202755A28E00735F32 /* BoardView.swift */,
 				AAD0CA212756FB45009232D5 /* DevicesBarView.swift */,
-				AAB34890275A47A800D6A490 /* ResistorView.swift */,
+				AAC7DB3A2767A37700518A1F /* BarResistorView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -270,6 +274,16 @@
 				AA231F122755A17400735F32 /* BoardRouterInput.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		AAC7DB37276795A500518A1F /* Data Managers */ = {
+			isa = PBXGroup;
+			children = (
+				AA231E6B27557B9E00735F32 /* DataManager.swift */,
+				AAC7DB352767957200518A1F /* BoardDataManager.swift */,
+				AAC7DB38276795D200518A1F /* DevicesDataManager.swift */,
+			);
+			path = "Data Managers";
 			sourceTree = "<group>";
 		};
 		AAD0CA1E2756EFC0009232D5 /* Entity */ = {
@@ -368,15 +382,16 @@
 				AA231F212755A28E00735F32 /* BoardView.swift in Sources */,
 				AA231EF0275588E000735F32 /* MainAssembly.swift in Sources */,
 				AA231EF2275588E000735F32 /* MainViewInput.swift in Sources */,
+				AAC7DB362767957200518A1F /* BoardDataManager.swift in Sources */,
 				AA231EF1275588E000735F32 /* MainPresenter.swift in Sources */,
-				AAB34891275A47A800D6A490 /* ResistorView.swift in Sources */,
 				AA231F1B2755A17400735F32 /* BoardInteractorOutput.swift in Sources */,
-				AA231E6C27557B9E00735F32 /* Data Manager.swift in Sources */,
+				AA231E6C27557B9E00735F32 /* DataManager.swift in Sources */,
 				AA231EF6275588E000735F32 /* MainInteractor.swift in Sources */,
 				AA231EFF27559F0900735F32 /* MainView.swift in Sources */,
 				AA231EF5275588E000735F32 /* MainInteractorOutput.swift in Sources */,
 				AA231F132755A17400735F32 /* BoardAssemblyProtocol.swift in Sources */,
 				AA231EF4275588E000735F32 /* MainViewController.swift in Sources */,
+				AAC7DB39276795D200518A1F /* DevicesDataManager.swift in Sources */,
 				AA103F95276373E1009D8450 /* ElectronicDevice.swift in Sources */,
 				AA231F172755A17400735F32 /* BoardViewController.swift in Sources */,
 				AA231F162755A17400735F32 /* BoardViewInput.swift in Sources */,
@@ -391,6 +406,7 @@
 				AA231F192755A17400735F32 /* BoardInteractorInput.swift in Sources */,
 				AA103F92276373E1009D8450 /* FactoryElectronicDevices.swift in Sources */,
 				AA231E062755368700735F32 /* SceneDelegate.swift in Sources */,
+				AAC7DB3B2767A37700518A1F /* BarResistorView.swift in Sources */,
 				AAD0CA222756FB45009232D5 /* DevicesBarView.swift in Sources */,
 				AA231EF8275588E000735F32 /* MainRouterInput.swift in Sources */,
 			);

@@ -10,11 +10,10 @@ enum ElectronicDevices: String, CaseIterable {
 class FactoryElectronicDevices {
     static let defaultFactory = FactoryElectronicDevices()
     
-    func createElectronicDevice(selectedDevice: ElectronicDevices,
-                                device: ElectronicDevice) -> ElectronicDevice {
+    func createElectronicDevice(selectedDevice: ElectronicDevices) -> ElectronicDevice {
         switch selectedDevice {
-        case .resistor: return Resistor(device: device)
-        case .emfSourse: return EMFSource(device: device)
+        case .resistor: return Resistor()
+        case .emfSourse: return EMFSource()
         }
     }
 }

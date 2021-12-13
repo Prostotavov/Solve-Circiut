@@ -21,24 +21,12 @@ class BoardPresenter: BoardViewOutput, BoardInteractorOutput {
         interactor.getBoardContentSize()
     }
     
-    func getPointSize() -> CGSize {
-        interactor.getPointSize()
+    func getDevices() -> [ElectronicDevice] {
+        interactor.getDevices()
     }
     
-    func getDistanceBetweenPoints() -> Int {
-        interactor.getDistanceBetweenPoints()
-    }
-    
-    func getResistors() -> [Resistor] {
-        interactor.getResistors()
-    }
-    
-    func addResistor() {
-        interactor.addResistor()
-    }
-    
-    func addResistorIn(location: CGPoint) {
-        interactor.addResistorIn(location: location)
+    func add(device: ElectronicDevices, to location: CGPoint) {
+        interactor.add(device: device, to: location)
     }
     
 }

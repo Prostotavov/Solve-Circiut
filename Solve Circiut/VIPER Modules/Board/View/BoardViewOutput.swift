@@ -11,9 +11,6 @@ protocol BoardViewOutput: AnyObject {
     
     func createPoints() -> [[Point]]
     func getBoardContentSize() -> CGSize
-    func getPointSize() -> CGSize
-    func getDistanceBetweenPoints() -> Int
-    func getResistors() -> [Resistor]
-    func addResistor()
-    func addResistorIn(location: CGPoint)
+    func getDevices() -> [ElectronicDevice]
+    func add(device: ElectronicDevices, to location: CGPoint)
 }

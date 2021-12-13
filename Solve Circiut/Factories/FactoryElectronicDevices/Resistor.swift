@@ -3,7 +3,8 @@ import UIKit
 class Resistor: ElectronicDeviceImplementation {
     
     init() {
-        super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+        super.init(frame: CGRect(x: 0, y: 0, width: 20, height: 60))
+        self.setImage(UIImage(named: "resistor"), for: .normal)
         name = ""
         resistance = 0
         current = 0
@@ -11,7 +12,8 @@ class Resistor: ElectronicDeviceImplementation {
     }
     
     init(device: ElectronicDevice){
-        super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+        super.init(frame: CGRect(x: 0, y: 0, width: 20, height: 60))
+        self.setImage(UIImage(named: "resistor"), for: .normal)
         name = device.name
         resistance = device.resistance
         current = device.current

@@ -11,9 +11,8 @@ protocol DevicesBarViewDelegate {
     func getCurrentZoomValue() -> CGFloat
     func isZooming() -> Bool
     var boardView: BoardView {get set}
-    func addResistor()
-    func addResistorIn(location: CGPoint)
-    func getDistanceBetweenPoints() -> Int
+    func add(device: ElectronicDevices, to location: CGPoint)
+    func getBoardContentSize() -> CGSize
 }
 
 class DevicesBarView: UIView {
@@ -29,13 +28,7 @@ class DevicesBarView: UIView {
     
     private var isDragging = false
     
-    var resistorView: UIImageView = {
-        var resistorImage = UIImage(named: "resistor")
-        var imageView = UIImageView(image: resistorImage)
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.isUserInteractionEnabled = true
-        return imageView
-    }()
+    var resistorView: UIImageView = BarResistorView()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -60,16 +53,6 @@ class DevicesBarView: UIView {
         ])
     }
     
-    func createResistor() -> UIView{
-        let resistorImage = UIImage(named: "resistor")
-        let imageView = UIImageView(image: resistorImage)
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.isUserInteractionEnabled = true
-        imageView.bounds.size = CGSize(width: resistorWidth, height: resistorHeight)
-        return imageView
-    }
-    
-    
     override func layoutSubviews() {
         super.layoutSubviews()
         resistorView.frame.size = CGSize(width: resistorWidth * currentZoomValue,
@@ -77,7 +60,7 @@ class DevicesBarView: UIView {
     }
 }
 
-
+// extension for drag and drop functions
 extension DevicesBarView {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -102,23 +85,44 @@ extension DevicesBarView {
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard isDragging, let touch = touches.first  else {return}
-        var location = touch.location(in: delegate.boardView)
-        location.y = location.y - (resistorView.frame.size.height / 2) * 3.5 / delegate.getCurrentZoomValue()
+        
+        var boardLocation = touch.location(in: delegate.boardView)
+        boardLocation.y = boardLocation.y - (resistorView.frame.size.height / 2) * 3.5 / delegate.getCurrentZoomValue()
         
         var barLocation = touch.location(in: self)
         barLocation.x = barLocation.x - (resistorView.frame.size.width / 2)
         barLocation.y = barLocation.y + resistorView.frame.size.height
         - (resistorView.frame.size.height / 2) * 3.5
         
-         let distanceBetweenPoints = CGFloat(delegate.getDistanceBetweenPoints())
-        print("location \(location)")
-        print("         ")
+        setResistorLocation(location: &boardLocation)
         
-        if barLocation.y < 0, location.x > 0, location.y > distanceBetweenPoints {
-            delegate.addResistorIn(location: location)
-            
+        if barLocation.y < 0 {
+            delegate.add(device: .resistor, to: boardLocation)
         }
         returnDeviceOntoBar()
+    }
+    
+    // if the user pulls the device outside the board,
+    // then the coordinates of the device take
+    // an extreme value on the board
+    func setResistorLocation(location: inout CGPoint) {
+        
+        var settedLocation = CGPoint()
+        let distanceBetweenPoints = BoardDataManagerImplementation.distanceBetweenPoints
+        let boardSize  = delegate.getBoardContentSize().width
+        
+        if location.x < distanceBetweenPoints {
+            settedLocation.x = distanceBetweenPoints
+        }
+        if location.y < distanceBetweenPoints {
+            settedLocation.y = distanceBetweenPoints
+        }
+        if location.x > boardSize {
+            settedLocation.x = boardSize - distanceBetweenPoints
+        }
+        if location.y > boardSize {
+            settedLocation.y = boardSize - distanceBetweenPoints * 3
+        }
     }
     
     func returnDeviceOntoBar() {

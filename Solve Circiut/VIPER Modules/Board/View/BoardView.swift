@@ -9,9 +9,7 @@ import UIKit
 
 protocol BoardViewDelegate {
     func createPoints() -> [[Point]]
-    func getPointSize() -> CGSize
-    func getDistanceBetweenPoints() -> Int
-    func getResistors() -> [Resistor]
+    func getDevices() -> [ElectronicDevice]
 }
 
 class BoardView: UIView {
@@ -30,13 +28,11 @@ class BoardView: UIView {
     
     func showPoints() {
         
-        let pointSize: CGSize = delegate.getPointSize()
-        let distance: Int = delegate.getDistanceBetweenPoints()
+        let distance: Int = Int(BoardDataManagerImplementation.distanceBetweenPoints)
         let points = delegate.createPoints()
         
         for rowPoints in points {
             for point in rowPoints {
-                point.bounds.size = pointSize
                 point.center = CGPoint(x: (point.x + 1) * distance, y: (point.y + 1) * distance)
                 self.addSubview(point)
             }
@@ -44,13 +40,14 @@ class BoardView: UIView {
     }
     
     func showResistors() {
-        let distance: CGFloat = CGFloat(delegate.getDistanceBetweenPoints())
-        let resistors = delegate.getResistors()
+        let distance: CGFloat = BoardDataManagerImplementation.distanceBetweenPoints
+        let resistors = delegate.getDevices()
         
         for resistor in resistors {
             
-            resistor.bounds.size = CGSize(width: 20, height: 60)
-            resistor.center = CGPoint(x: resistor.leadingPin.x * distance, y: resistor.leadingPin.y * distance)
+            let x = (resistor.leadingPin.x + 1) * distance - resistor.bounds.width/2
+            let y = (resistor.leadingPin.y + 1) * distance
+            resistor.frame.origin = CGPoint(x: x, y: y)
             self.addSubview(resistor)
         }
     }
