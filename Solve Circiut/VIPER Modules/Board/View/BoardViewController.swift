@@ -25,7 +25,7 @@ class BoardViewController: UIViewController, BoardViewInput, BoardViewDelegate, 
         devicesBarView.delegate = self
         setBoardView()
         view.addSubview(devicesBarView)
-        setupDevicesViewConstraints()
+        setupDevicesBarViewConstraints()
     }
     
     func setBoardView() {
@@ -90,7 +90,7 @@ extension BoardViewController {
         ])
     }
     
-    func setupDevicesViewConstraints() {
+    func setupDevicesBarViewConstraints() {
         devicesBarView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
         devicesBarView.bottomAnchor.constraint(equalTo: view.bottomAnchor),

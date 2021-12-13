@@ -15,5 +15,5 @@ protocol BoardViewInput: AnyObject {
     func add(device: ElectronicDevices, to location: CGPoint)
     
     func setupImageScrollViewConstraints()
-    func setupDevicesViewConstraints()
+    func setupDevicesBarViewConstraints()
 }
