@@ -17,7 +17,7 @@ class EMFSourceButton: DeviceButtonImplementation {
         voltage = 0
     }
     
-    init(device: ElectronicDevice){
+    init(device: DeviceButton){
         super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         name = device.name
         emf = device.emf

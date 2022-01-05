@@ -9,7 +9,7 @@ import UIKit
 
 protocol BoardViewDelegate {
     func createPoints() -> [[Point]]
-    func getDevices() -> [ElectronicDevice]
+    func getDevices() -> [DeviceButton]
 }
 
 class BoardView: UIView {

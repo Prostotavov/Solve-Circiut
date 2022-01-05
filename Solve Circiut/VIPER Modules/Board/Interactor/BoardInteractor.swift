@@ -39,16 +39,23 @@ class BoardInteractor: BoardInteractorInput {
         return points
     }
     
-    func add(device: ElectronicDevices, to location: CGPoint) {
+    func add(_ selectedDevice: Devices, to location: CGPoint) {
         let distanceBetweenPoints = BoardDataManagerImplementation.distanceBetweenPoints
-        let device = FactoryElectronicDevices.defaultFactory.createElectronicDevice(selectedDevice: device)
+        
+        var device: DeviceButton
+        
+        switch selectedDevice {
+        case .resistor: device = ResistorFactory.defaultFactory.createDeviceButton()
+        case .EMFSource: device = EMFSourceFactory.defaultFactory.createDeviceButton()
+        }
+        
         device.leadingPin.x = round(location.x / CGFloat(distanceBetweenPoints)) - 1
         device.leadingPin.y = round(location.y / CGFloat(distanceBetweenPoints)) - 1
         dataManager.devices.add(device: device)
         print(device.leadingPin)
     }
     
-    func getDevices() -> [ElectronicDevice] {
+    func getDevices() -> [DeviceButton] {
         dataManager.devices.devices
     }
     

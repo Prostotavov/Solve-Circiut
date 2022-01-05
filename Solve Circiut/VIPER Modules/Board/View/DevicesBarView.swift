@@ -11,7 +11,7 @@ protocol DevicesBarViewDelegate {
     func getCurrentZoomValue() -> CGFloat
     func isZooming() -> Bool
     var boardView: BoardView {get set}
-    func add(device: ElectronicDevices, to location: CGPoint)
+    func add(_ selectedDevice: Devices, to location: CGPoint)
     func getBoardContentSize() -> CGSize
 }
 
@@ -97,7 +97,7 @@ extension DevicesBarView {
         setResistorLocation(location: &boardLocation)
         
         if barLocation.y < 0 {
-            delegate.add(device: .resistor, to: boardLocation)
+            delegate.add(.resistor, to: boardLocation)
         }
         returnDeviceOntoBar()
     }

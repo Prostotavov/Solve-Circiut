@@ -40,13 +40,13 @@ class BoardViewController: UIViewController, BoardViewInput, BoardViewDelegate, 
         boardScrollView.addSubview(view: boardView)
     }
     
-    func getDevices() -> [ElectronicDevice] {
+    func getDevices() -> [DeviceButton] {
         output.getDevices()
         
     }
     
-    func add(device: ElectronicDevices, to location: CGPoint) {
-        output.add(device: device, to: location)
+    func add(_ selectedDevice: Devices, to location: CGPoint) {
+        output.add(selectedDevice, to: location)
         boardView.showResistors()
     }
     

@@ -9,18 +9,18 @@ import UIKit
 
 protocol DevicesDataManager {
     
-    var devices: [ElectronicDevice] {get}
+    var devices: [DeviceButton] {get}
     var devicesCount: Int {get}
     
-    func add(device: ElectronicDevice)
+    func add(device: DeviceButton)
 }
 
 class DevicesDataManagerImplementation: DevicesDataManager {
     
-    var devices: [ElectronicDevice] = [ElectronicDevice]()
+    var devices: [DeviceButton] = [DeviceButton]()
     var devicesCount: Int = 0
     
-    func add(device: ElectronicDevice) {
+    func add(device: DeviceButton) {
         devicesCount += 1
         devices.append(device)
     }

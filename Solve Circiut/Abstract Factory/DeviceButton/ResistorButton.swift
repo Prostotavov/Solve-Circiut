@@ -18,7 +18,7 @@ class ResistorButton: DeviceButtonImplementation {
         voltage = 0
     }
     
-    init(device: ElectronicDevice){
+    init(device: DeviceButton){
         super.init(frame: CGRect(x: 0, y: 0, width: 20, height: 60))
         self.setImage(UIImage(named: "resistor"), for: .normal)
         name = device.name

@@ -8,10 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AA0B58B627766D5100E2379B /* AbstractFactoryDevices.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0B58B527766D5100E2379B /* AbstractFactoryDevices.swift */; };
-		AA103F92276373E1009D8450 /* FactoryElectronicDevices.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA103F8E276373E1009D8450 /* FactoryElectronicDevices.swift */; };
-		AA103F93276373E1009D8450 /* Resistor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA103F8F276373E1009D8450 /* Resistor.swift */; };
-		AA103F94276373E1009D8450 /* EMFSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA103F90276373E1009D8450 /* EMFSource.swift */; };
-		AA103F95276373E1009D8450 /* ElectronicDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA103F91276373E1009D8450 /* ElectronicDevice.swift */; };
 		AA231E042755368700735F32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231E032755368700735F32 /* AppDelegate.swift */; };
 		AA231E062755368700735F32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA231E052755368700735F32 /* SceneDelegate.swift */; };
 		AA231E0D2755368A00735F32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA231E0C2755368A00735F32 /* Assets.xcassets */; };
@@ -60,10 +56,6 @@
 
 /* Begin PBXFileReference section */
 		AA0B58B527766D5100E2379B /* AbstractFactoryDevices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractFactoryDevices.swift; sourceTree = "<group>"; };
-		AA103F8E276373E1009D8450 /* FactoryElectronicDevices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactoryElectronicDevices.swift; sourceTree = "<group>"; };
-		AA103F8F276373E1009D8450 /* Resistor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resistor.swift; sourceTree = "<group>"; };
-		AA103F90276373E1009D8450 /* EMFSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMFSource.swift; sourceTree = "<group>"; };
-		AA103F91276373E1009D8450 /* ElectronicDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElectronicDevice.swift; sourceTree = "<group>"; };
 		AA231E002755368700735F32 /* Solve Circiut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Solve Circiut.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA231E032755368700735F32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA231E052755368700735F32 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,17 +115,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AA103F8D276373E1009D8450 /* FactoryElectronicDevices */ = {
-			isa = PBXGroup;
-			children = (
-				AA103F8E276373E1009D8450 /* FactoryElectronicDevices.swift */,
-				AA103F91276373E1009D8450 /* ElectronicDevice.swift */,
-				AA103F8F276373E1009D8450 /* Resistor.swift */,
-				AA103F90276373E1009D8450 /* EMFSource.swift */,
-			);
-			path = FactoryElectronicDevices;
-			sourceTree = "<group>";
-		};
 		AA231DF72755368700735F32 = {
 			isa = PBXGroup;
 			children = (
@@ -154,7 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				AA99A3492786340800A0E80A /* Abstract Factory */,
-				AAD0CA23275793AB009232D5 /* Factories */,
 				AA231E17275536CE00735F32 /* VIPER Modules */,
 				AAC7DB37276795A500518A1F /* Data Managers */,
 				AA231E052755368700735F32 /* SceneDelegate.swift */,
@@ -364,14 +344,6 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
-		AAD0CA23275793AB009232D5 /* Factories */ = {
-			isa = PBXGroup;
-			children = (
-				AA103F8D276373E1009D8450 /* FactoryElectronicDevices */,
-			);
-			path = Factories;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -450,7 +422,6 @@
 				AA231EF9275588E000735F32 /* MainRouter.swift in Sources */,
 				AA231F1A2755A17400735F32 /* BoardInteractor.swift in Sources */,
 				AA231EF3275588E000735F32 /* MainViewOutput.swift in Sources */,
-				AA103F93276373E1009D8450 /* Resistor.swift in Sources */,
 				AA231F212755A28E00735F32 /* BoardView.swift in Sources */,
 				AA231EF0275588E000735F32 /* MainAssembly.swift in Sources */,
 				AA99A35F27863BEE00A0E80A /* EMFSourceFactory.swift in Sources */,
@@ -469,10 +440,8 @@
 				AA231F132755A17400735F32 /* BoardAssemblyProtocol.swift in Sources */,
 				AA231EF4275588E000735F32 /* MainViewController.swift in Sources */,
 				AAC7DB39276795D200518A1F /* DevicesDataManager.swift in Sources */,
-				AA103F95276373E1009D8450 /* ElectronicDevice.swift in Sources */,
 				AA231F172755A17400735F32 /* BoardViewController.swift in Sources */,
 				AA231F162755A17400735F32 /* BoardViewInput.swift in Sources */,
-				AA103F94276373E1009D8450 /* EMFSource.swift in Sources */,
 				AA231F1D2755A17400735F32 /* BoardRouterInput.swift in Sources */,
 				AAD0CA202756EFEE009232D5 /* BoardEntity.swift in Sources */,
 				AA0B58B627766D5100E2379B /* AbstractFactoryDevices.swift in Sources */,
@@ -484,7 +453,6 @@
 				AA231F182755A17400735F32 /* BoardViewOutput.swift in Sources */,
 				AA231E042755368700735F32 /* AppDelegate.swift in Sources */,
 				AA231F192755A17400735F32 /* BoardInteractorInput.swift in Sources */,
-				AA103F92276373E1009D8450 /* FactoryElectronicDevices.swift in Sources */,
 				AA231E062755368700735F32 /* SceneDelegate.swift in Sources */,
 				AAC7DB3B2767A37700518A1F /* BarResistorView.swift in Sources */,
 				AAD0CA222756FB45009232D5 /* DevicesBarView.swift in Sources */,

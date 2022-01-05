@@ -7,8 +7,13 @@
 
 import UIKit
 
+enum Devices: String, CaseIterable {
+    case resistor
+    case EMFSource
+}
+
 protocol AbstractFactoryDevices {
-    
+        
     func createDeviceButton() -> DeviceButton
     func createDeviceImageView() -> DeviceImageView
 }
