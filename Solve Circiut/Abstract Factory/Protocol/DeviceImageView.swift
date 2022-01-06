@@ -9,6 +9,8 @@ import UIKit
 
 protocol DeviceImageView: UIImageView {
     
+    var height: CGFloat {get}
+    var width: CGFloat {get}
 }
 
 

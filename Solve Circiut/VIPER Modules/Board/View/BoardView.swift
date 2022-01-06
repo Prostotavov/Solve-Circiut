@@ -39,16 +39,16 @@ class BoardView: UIView {
         }
     }
     
-    func showResistors() {
+    func showDevices() {
         let distance: CGFloat = BoardDataManagerImplementation.distanceBetweenPoints
-        let resistors = delegate.getDevices()
+        let devices = delegate.getDevices()
         
-        for resistor in resistors {
+        for device in devices {
             
-            let x = (resistor.leadingPin.x + 1) * distance - resistor.bounds.width/2
-            let y = (resistor.leadingPin.y + 1) * distance
-            resistor.frame.origin = CGPoint(x: x, y: y)
-            self.addSubview(resistor)
+            let x = (device.leadingPin.x + 1) * distance - device.bounds.width/2
+            let y = (device.leadingPin.y + 1) * distance
+            device.frame.origin = CGPoint(x: x, y: y)
+            self.addSubview(device)
         }
     }
     

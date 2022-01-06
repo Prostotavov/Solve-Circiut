@@ -30,7 +30,7 @@ class BoardViewController: UIViewController, BoardViewInput, BoardViewDelegate, 
     
     func setBoardView() {
         boardView.showPoints()
-        boardView.showResistors()
+        boardView.showDevices()
         
         boardScrollView = BoardScrollView(frame: view.bounds)
         view.addSubview(boardScrollView)
@@ -47,7 +47,7 @@ class BoardViewController: UIViewController, BoardViewInput, BoardViewDelegate, 
     
     func add(_ selectedDevice: Devices, to location: CGPoint) {
         output.add(selectedDevice, to: location)
-        boardView.showResistors()
+        boardView.showDevices()
     }
     
 }

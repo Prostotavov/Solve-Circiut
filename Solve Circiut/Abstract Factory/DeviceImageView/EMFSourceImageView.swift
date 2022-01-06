@@ -9,8 +9,11 @@ import UIKit
 
 class EMFSourceImageView: UIImageView, DeviceImageView {
 
+    var height: CGFloat = 60
+    var width: CGFloat = 20
+
     init() {
-        super.init(frame: CGRect(x: 0, y: 0, width: 20, height: 60))
+        super.init(frame: CGRect(x: 0, y: 0, width: width, height: height))
         self.image = UIImage(named: "resistor")
         self.translatesAutoresizingMaskIntoConstraints = false
         self.isUserInteractionEnabled = true
